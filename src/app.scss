@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+/* Reset default margin and padding */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* Ensure html and body take up the full height */
+html {
+	height: 100%;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 16px;
+}
+
+// Define color variables for light and dark themes
+$light-white: #ffffff;
+$light-white-hover: #f2f2f2;
+$light-white-focus: #e6e6e6;
+$light-black: #1a1a1a;
+$light-black-hover: #000000;
+$light-black-focus: #333333;
+$light-gray: #e0e0e0;
+$light-gray-hover: #c7c7c7;
+$light-gray-focus: #b0b0b0;
+$light-dark-gray: #7d7d7d;
+$light-light-blue: #4d8cff;
+$light-light-blue-hover: #3974e6;
+$light-light-blue-focus: #2e5bbf;
+$light-navy: #0d223d;
+$light-navy-hover: #09192f;
+$light-navy-focus: #061526;
+$light-navy-accent: #152f50;
+$light-navy-accent-hover: #122847;
+$light-navy-accent-focus: #0e213e;
+$light-purple: #9a4dff;
+$light-purple-hover: #8540e6;
+$light-purple-focus: #6b33bf;
+
+$dark-white: #f2f2f2;
+$dark-white-hover: #e6e6e6;
+$dark-white-focus: #d9d9d9;
+$dark-black: #121212;
+$dark-black-hover: #000000;
+$dark-black-focus: #2a2a2a;
+$dark-gray: #2a2a2a;
+$dark-gray-hover: #1f1f1f;
+$dark-gray-focus: #3d3d3d;
+$dark-dark-gray: #666666;
+$dark-dark-gray-hover: #525252;
+$dark-dark-gray-focus: #404040;
+$dark-blue: #3b5bff;
+$dark-blue-hover: #324be6;
+$dark-blue-focus: #273cbf;
+$dark-navy: #081224;
+$dark-navy-hover: #060e1c;
+$dark-navy-focus: #040a15;
+$dark-navy-accent: #0a1830;
+$dark-navy-accent-hover: #081327;
+$dark-navy-accent-focus: #060f1f;
+$dark-purple: #7d3dff;
+$dark-purple-hover: #6935e6;
+$dark-purple-focus: #552abf;
+
+// Theme Variables
+:root {
+	// Light Theme
+	--color-background: #{$light-white};
+	--color-header-background: #{$light-navy};
+	--color-text: #{$light-black};
+	--color-text-secondary: #{$dark-white};
+	--color-primary: #{$light-light-blue};
+	--color-secondary: #{$light-purple};
+	--color-gray: #{$light-gray};
+	--color-dark-gray: #{$light-dark-gray};
+	--color-button-primary: #{$light-light-blue};
+	--color-button-primary-hover: #{$light-light-blue-hover};
+	--color-button-primary-focus: #{$light-light-blue-focus};
+	--color-button-secondary-white: #{$light-white};
+	--color-button-secondary-white-hover: #{$light-white-hover};
+	--color-button-secondary-white-focus: #{$light-white-focus};
+}
+
+// Dark Theme
+[data-theme='dark'] {
+	--color-background: #{$dark-black};
+	--color-header-background: #{$dark-navy};
+	--color-text: #{$dark-white};
+	--color-text-secondary: #{$light-black};
+	--color-primary: #{$dark-blue};
+	--color-secondary: #{$dark-purple};
+	--color-gray: #{$dark-gray};
+	--color-dark-gray: #{$dark-dark-gray};
+	--color-button-primary: #{$dark-blue};
+	--color-button-primary-hover: #{$dark-blue-hover};
+	--color-button-primary-focus: #{$dark-blue-focus};
+}
+
+// Base Styles
+body {
+	background-color: var(--color-background);
+	color: var(--color-text);
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	font-size: 1rem;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+// Utility classes
+.primary {
+	color: var(--color-primary);
+}
+
+.secondary {
+	color: var(--color-secondary);
+}
+
+.gray {
+	color: var(--color-gray);
+}
+
+// Floating Header
+.header {
+	width: 100%;
+	padding: 1rem 6rem;
+	background-color: var(--color-header-background);
+	color: var(--color-white);
+	font-size: 1rem; // Adjusts with body font size
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	z-index: 1000;
+}
+
+// Footer
+.footer {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	padding: 1rem 2rem;
+	background-color: var(--color-header-background);
+	color: var(--color-white);
+	font-size: 1rem; // Adjusts with body font size
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+	z-index: 1000;
+}
+
+.button-primary {
+	background-color: var(--color-button-primary);
+	color: var(--color-background);
+	padding: 0.75rem 1.5rem; // Default padding for desktop
+	font-size: 1rem; // Default font size for desktop
+	border-radius: 4px;
+	border: none;
+	cursor: pointer;
+	transition: all 0.3s;
+
+	&:hover {
+		background-color: var(--color-button-primary-hover);
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+		transform: scale(1.05);
+	}
+	&:focus {
+		background-color: var(--color-button-primary-focus);
+		box-shadow: 0 0 0 3px rgba(77, 140, 255, 0.4); // Add a soft focus ring
+		outline: none; // Remove default outline
+	}
+}
+
+.button-secondary {
+	background-color: transparent;
+	color: var(--color-button-primary);
+	padding: 0.75rem 1.5rem; // Default padding for desktop
+	font-size: 1rem; // Default font size for desktop
+	border-radius: 4px;
+	color: 2px solid var(--color-button-primary);
+	border: 2px solid var(--color-button-primary);
+	cursor: pointer;
+	transition: all 0.3s;
+
+	&:hover {
+		color: 2px solid var(--color-button-primary-hover);
+		border: 2px solid var(--color-button-primary-hover);
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+		transform: scale(1.05);
+	}
+	&:focus {
+		color: 2px solid var(--color-button-primary-focus);
+		border: 2px solid var(--color-button-primary-focus);
+		box-shadow: 0 0 0 3px rgba(77, 140, 255, 0.4); // Add a soft focus ring
+		outline: none; // Remove default outline
+	}
+}
+
+.button-secondary-white {
+	background-color: transparent;
+	padding: 0.75rem 1.5rem; // Default padding for desktop
+	font-size: 1rem; // Default font size for desktop
+	border-radius: 4px;
+	color: 2px solid var(--color-button-secondary-white);
+	border: 2px solid var(--color-button-secondary-white);
+	cursor: pointer;
+	transition: all 0.3s;
+
+	&:hover {
+		color: 2px solid var(--color-button-secondary-white-hover);
+		border: 2px solid var(--color-button-secondary-white-hover);
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+		transform: scale(1.05);
+	}
+	&:focus {
+		color: 2px solid var(--color-button-secondary-white-focus);
+		border: 2px solid var(--color-button-secondary-white-focus);
+		box-shadow: 0 0 0 3px rgba(77, 140, 255, 0.4); // Add a soft focus ring
+		outline: none; // Remove default outline
+	}
+}
+
+// padding: 0.5rem 1rem;
+
+// Content Card
+.card {
+	background-color: var(--color-gray);
+	color: var(--color-text);
+	padding: 1.5rem;
+	margin: 1rem;
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	transition: box-shadow 0.3s;
+
+	&:hover {
+		box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+	}
+}
+
+// Media Queries for Scaling
+
+// Tablet (768px and below)
+@media (max-width: 768px) {
+	html {
+		font-size: 15px; // Slightly smaller font size
+	}
+
+	.header,
+	.footer {
+		padding: 0.8rem 1.5rem; // Reduce padding
+		font-size: 0.9rem; // Smaller font size for header/footer
+	}
+	.button {
+		padding: 0.65rem 1.25rem; // Slightly smaller padding
+		font-size: 0.9rem; // Slightly smaller font size
+	}
+}
+
+// Phone (480px and below)
+@media (max-width: 480px) {
+	html {
+		font-size: 14px; // Further reduce root font size for smaller screens
+	}
+
+	.header,
+	.footer {
+		padding: 0.6rem 1rem; // Even smaller padding for compact layout
+		font-size: 0.8rem; // Smaller font size for phone screens
+	}
+	.button {
+		padding: 0.6rem 1rem; // Compact padding for smaller screens
+		font-size: 0.85rem; // Smaller font size for better fit
+	}
+}
