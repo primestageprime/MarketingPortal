@@ -1,10 +1,5 @@
-<section><h3>TEST</h3></section>
+<script>
+	import ScrollFade from '$lib/components/ScrollFade.svelte';
+</script>
 
-<style>
-	section {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-	}
-</style>
+<ScrollFade />

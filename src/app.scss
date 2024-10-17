@@ -13,6 +13,13 @@ html {
 	font-size: 16px;
 }
 
+$small-screen: '(max-width: 480px)';
+$phone-portrait: '(max-width: 599px) and (orientation: portrait)';
+$phone-landscape: '(max-width: 850px) and (orientation: landscape)';
+$tablet-portrait: '(min-width: 600px) and (max-width: 1024px)  and (orientation: portrait)';
+$tablet-landscape: '(min-width: 600px) and (max-width: 1024px) and (orientation: landscape)';
+$desktop: '(min-width: 1025px)';
+
 // Define color variables for light and dark themes
 $light-white: #ffffff;
 $light-white-hover: #f2f2f2;
@@ -124,6 +131,7 @@ body {
 
 // Floating Header
 .header {
+	height: 10vh;
 	width: 100%;
 	padding: 1rem 6rem;
 	background-color: var(--color-header-background);
@@ -202,7 +210,7 @@ body {
 
 .button-secondary-white {
 	background-color: transparent;
-	padding: 0.75rem 1.5rem; // Default padding for desktop
+	padding: 0.6rem 1.2rem; // Default padding for desktop
 	font-size: 1rem; // Default font size for desktop
 	border-radius: 4px;
 	color: 2px solid var(--color-button-secondary-white);
@@ -244,7 +252,7 @@ body {
 // Media Queries for Scaling
 
 // Tablet (768px and below)
-@media (max-width: 768px) {
+@media #{$tablet-portrait} {
 	html {
 		font-size: 15px; // Slightly smaller font size
 	}
@@ -254,14 +262,16 @@ body {
 		padding: 0.8rem 1.5rem; // Reduce padding
 		font-size: 0.9rem; // Smaller font size for header/footer
 	}
-	.button {
+	.button-primary,
+	.button-secondary,
+	.button-secondary-white {
 		padding: 0.65rem 1.25rem; // Slightly smaller padding
 		font-size: 0.9rem; // Slightly smaller font size
 	}
 }
 
 // Phone (480px and below)
-@media (max-width: 480px) {
+@media (#{$small-screen}) {
 	html {
 		font-size: 14px; // Further reduce root font size for smaller screens
 	}
@@ -271,8 +281,52 @@ body {
 		padding: 0.6rem 1rem; // Even smaller padding for compact layout
 		font-size: 0.8rem; // Smaller font size for phone screens
 	}
-	.button {
-		padding: 0.6rem 1rem; // Compact padding for smaller screens
+	.button-primary,
+	.button-secondary,
+	.button-secondary-white {
+		padding: 0.4rem 0.6rem; // Compact padding for smaller screens
 		font-size: 0.85rem; // Smaller font size for better fit
+	}
+}
+// Phone (599px and below)
+@media (#{$phone-portrait}) {
+	html {
+		font-size: 14px; // Further reduce root font size for smaller screens
+	}
+
+	.header,
+	.footer {
+		padding: 0.6rem 1rem; // Even smaller padding for compact layout
+		font-size: 0.8rem; // Smaller font size for phone screens
+	}
+	.button-primary,
+	.button-secondary,
+	.button-secondary-white {
+		padding: 0.4rem 0.6rem; // Compact padding for smaller screens
+		font-size: 0.85rem; // Smaller font size for better fit
+	}
+}
+
+@media #{$tablet-landscape} {
+	.button-primary,
+	.button-secondary,
+	.button-secondary-white {
+		padding: 0.4rem 0.6rem;
+		font-size: 0.85rem;
+	}
+	.header {
+		height: 10vh;
+	}
+}
+
+@media #{$phone-landscape} {
+	.button-primary,
+	.button-secondary,
+	.button-secondary-white {
+		padding: 0.4rem 0.6rem;
+		font-size: 0.85rem;
+	}
+	.header {
+		height: 10vh;
 	}
 }
