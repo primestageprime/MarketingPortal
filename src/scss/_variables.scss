@@ -1,0 +1,6 @@
+$small-screen: '(max-width: 480px)';
+$phone-portrait: '(max-width: 599px) and (orientation: portrait)';
+$phone-landscape: '(max-width: 850px) and (orientation: landscape)';
+$tablet-portrait: '(min-width: 600px) and (max-width: 1024px)  and (orientation: portrait)';
+$tablet-landscape: '(min-width: 600px) and (max-width: 1024px) and (orientation: landscape)';
+$desktop: '(min-width: 1025px)';
