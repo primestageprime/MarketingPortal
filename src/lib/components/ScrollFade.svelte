@@ -214,22 +214,6 @@
 		opacity: 1;
 	}
 
-	.shiny-metallic-text {
-		font-family: 'Arial', sans-serif;
-		font-size: 4rem;
-		font-weight: bold;
-		background: linear-gradient(135deg, #4667ae, #7792c6, #c0d2fb, #7792c6, #4667ae, #224795);
-		background-size: 400%; /* Increased size for a smoother transition */
-		color: transparent;
-
-		/* Vendor prefixes for compatibility */
-		-webkit-background-clip: text; /* Safari, Chrome */
-		-moz-background-clip: text; /* Firefox (not always needed) */
-		-ms-background-clip: text; /* Internet Explorer */
-		-o-background-clip: text; /* Older Opera */
-		background-clip: text; /* Standard */
-	}
-
 	.infinite-shine {
 		animation: shine 6s infinite ease-in-out;
 	}
@@ -272,25 +256,6 @@
 		.content-no-interaction {
 			height: 80vh;
 			top: 20vh;
-		}
-	}
-
-	// Tablet (768px and below)
-	@media #{$tablet-portrait} {
-		html {
-			font-size: 15px; // Slightly smaller font size
-		}
-
-		.header,
-		.footer {
-			padding: 0.8rem 1.5rem; // Reduce padding
-			font-size: 0.9rem; // Smaller font size for header/footer
-		}
-		.button-primary,
-		.button-secondary,
-		.button-secondary-white {
-			padding: 0.65rem 1.25rem; // Slightly smaller padding
-			font-size: 0.9rem; // Slightly smaller font size
 		}
 	}
 
