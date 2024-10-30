@@ -1,0 +1,72 @@
+.button-primary {
+	background-color: var(--color-button-primary);
+	color: var(--color-button-secondary-white);
+	padding: 0.75rem 1.5rem; // Default padding for desktop
+	font-size: 1rem; // Default font size for desktop
+	border-radius: 4px;
+	border: none;
+	cursor: pointer;
+	transition: all 0.3s;
+	text-decoration: none; /* Remove underline when using for anchor tags */
+
+	&:hover {
+		background-color: var(--color-button-primary-hover);
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+		transform: scale(1.05);
+	}
+	&:focus {
+		background-color: var(--color-button-primary-focus);
+		box-shadow: 0 0 0 3px rgba(77, 140, 255, 0.4); // Add a soft focus ring
+		outline: none; // Remove default outline
+	}
+}
+
+.button-secondary {
+	background-color: transparent;
+	color: var(--color-button-primary);
+	padding: 0.75rem 1.5rem; // Default padding for desktop
+	font-size: 1rem; // Default font size for desktop
+	border-radius: 4px;
+	border: 2px solid var(--color-button-primary);
+	cursor: pointer;
+	transition: all 0.3s;
+	text-decoration: none; /* Remove underline when using for anchor tags */
+
+	&:hover {
+		color: var(--color-button-primary-hover);
+		border: 2px solid var(--color-button-primary-hover);
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+		transform: scale(1.05);
+	}
+	&:focus {
+		color: var(--color-button-primary-focus);
+		border: 2px solid var(--color-button-primary-focus);
+		box-shadow: 0 0 0 3px rgba(77, 140, 255, 0.4); // Add a soft focus ring
+		outline: none; // Remove default outline
+	}
+}
+
+.button-secondary-white {
+	background-color: transparent;
+	padding: 0.6rem 1.2rem; // Default padding for desktop
+	font-size: 1rem; // Default font size for desktop
+	border-radius: 4px;
+	color: var(--color-button-secondary-white);
+	border: 2px solid var(--color-button-secondary-white);
+	cursor: pointer;
+	transition: all 0.3s;
+	text-decoration: none; /* Remove underline when using for anchor tags */
+
+	&:hover {
+		color: var(--color-button-secondary-white-hover);
+		border: 2px solid var(--color-button-secondary-white-hover);
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+		transform: scale(1.05);
+	}
+	&:focus {
+		color: var(--color-button-secondary-white-focus);
+		border: 2px solid var(--color-button-secondary-white-focus);
+		box-shadow: 0 0 0 3px rgba(77, 140, 255, 0.4); // Add a soft focus ring
+		outline: none; // Remove default outline
+	}
+}

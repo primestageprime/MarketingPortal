@@ -15,64 +15,6 @@ html {
 	font-size: 16px;
 }
 
-$shiny-metallic-blue: linear-gradient(135deg, #4667ae, #7792c6, #c0d2fb, #7792c6, #4667ae, #224795);
-$shiny-metallic-red: linear-gradient(135deg, #cf3c3c, #d16a6a, #fbc0c0, #c67777, #ae4646, #c80f0f);
-
-// Define color variables for light and dark themes
-$light-white: #ffffff;
-$light-white-hover: #f2f2f2;
-$light-white-focus: #e6e6e6;
-$light-black: #1a1a1a;
-$light-black-hover: #000000;
-$light-black-focus: #333333;
-$light-gray: #e0e0e0;
-$light-gray-hover: #c7c7c7;
-$light-gray-focus: #b0b0b0;
-$light-dark-gray: #7d7d7d;
-$light-light-blue: #4d8cff;
-$light-light-blue-hover: #3974e6;
-$light-light-blue-focus: #2e5bbf;
-$light-navy: #0d223d;
-$light-navy-hover: #09192f;
-$light-navy-focus: #061526;
-$light-red: #ea0000;
-$light-red-hover: #da0000;
-$light-red-focus: #c50000;
-$light-navy-accent: #152f50;
-$light-navy-accent-hover: #122847;
-$light-navy-accent-focus: #0e213e;
-$light-purple: #9a4dff;
-$light-purple-hover: #8540e6;
-$light-purple-focus: #6b33bf;
-
-$dark-white: #f2f2f2;
-$dark-white-hover: #e6e6e6;
-$dark-white-focus: #d9d9d9;
-$dark-black: #121212;
-$dark-black-hover: #000000;
-$dark-black-focus: #2a2a2a;
-$dark-gray: #2a2a2a;
-$dark-gray-hover: #1f1f1f;
-$dark-gray-focus: #3d3d3d;
-$dark-dark-gray: #666666;
-$dark-dark-gray-hover: #525252;
-$dark-dark-gray-focus: #404040;
-$dark-blue: #3b5bff;
-$dark-blue-hover: #324be6;
-$dark-blue-focus: #273cbf;
-$dark-navy: #081224;
-$dark-navy-hover: #060e1c;
-$dark-navy-focus: #040a15;
-$dark-red: #9e0000;
-$dark-red-hover: #9e0000;
-$dark-red-focus: #9a0000;
-$dark-navy-accent: #0a1830;
-$dark-navy-accent-hover: #081327;
-$dark-navy-accent-focus: #060f1f;
-$dark-purple: #7d3dff;
-$dark-purple-hover: #6935e6;
-$dark-purple-focus: #552abf;
-
 // Theme Variables
 :root {
 	// Light Theme
@@ -80,6 +22,7 @@ $dark-purple-focus: #552abf;
 	--gradient-metallic-red: #{$shiny-metallic-red};
 	--color-background: #{$light-white};
 	--color-header-background: #{$light-navy};
+	--color-info-section-background: #{$light-cobalt};
 	--color-text: #{$light-black};
 	--color-text-secondary: #{$dark-white};
 	--color-primary: #{$light-navy};
@@ -96,10 +39,9 @@ $dark-purple-focus: #552abf;
 
 // Dark Theme
 [data-theme='dark'] {
-	--gradient-metallic-blue: #{$shiny-metallic-blue};
-	--gradient-metallic-red: #{$shiny-metallic-red};
+	--gradient-metallic-primary: #{$shiny-metallic-neutral};
 	--color-background: #{$dark-black};
-	--color-header-background: #{$dark-red};
+	--color-header-background: #{$dark-sienna};
 	--color-text: #{$dark-white};
 	--color-text-secondary: #{$light-black};
 	--color-primary: #{$dark-navy};
@@ -114,20 +56,41 @@ $dark-purple-focus: #552abf;
 	--color-button-secondary-white-focus: #{$light-white-focus};
 }
 
-[data-theme='dark-blue'] {
-	--gradient-metallic-blue: #{$shiny-metallic-blue};
-	--gradient-metallic-red: #{$shiny-metallic-red};
+[data-theme='dark-red'] {
+	--gradient-metallic-primary: #{$shiny-metallic-red};
+	--color-background: #{$dark-black};
+	--color-header-background: #{$dark-red};
+	--color-info-section-background: #{$light-sienna};
+	--color-team-section-background: #{$dark-orange};
+	--color-text: #{$dark-white};
+	--color-text-secondary: #{$light-black};
+	--color-primary: #{$dark-red};
+	--color-secondary: #{$dark-purple};
+	--color-gray: #{$dark-gray};
+	--color-dark-gray: #{$dark-dark-gray};
+	--color-button-primary: #{$dark-red};
+	--color-button-primary-hover: #{$dark-red-hover};
+	--color-button-primary-focus: #{$dark-red-focus};
+	--color-button-secondary-white: #{$light-white};
+	--color-button-secondary-white-hover: #{$light-white-hover};
+	--color-button-secondary-white-focus: #{$light-white-focus};
+}
+
+[data-theme='dark-navy'] {
+	--gradient-metallic-primary: #{$shiny-metallic-blue};
 	--color-background: #{$dark-black};
 	--color-header-background: #{$dark-navy};
+	--color-info-section-background: #{$light-cobalt};
+	--color-team-section-background: #{$dark-indigo};
 	--color-text: #{$dark-white};
 	--color-text-secondary: #{$light-black};
 	--color-primary: #{$dark-navy};
 	--color-secondary: #{$dark-purple};
 	--color-gray: #{$dark-gray};
 	--color-dark-gray: #{$dark-dark-gray};
-	--color-button-primary: #{$dark-blue};
-	--color-button-primary-hover: #{$dark-blue-hover};
-	--color-button-primary-focus: #{$dark-blue-focus};
+	--color-button-primary: #{$light-navy};
+	--color-button-primary-hover: #{$light-navy-hover};
+	--color-button-primary-focus: #{$light-navy-focus};
 	--color-button-secondary-white: #{$light-white};
 	--color-button-secondary-white-hover: #{$light-white-hover};
 	--color-button-secondary-white-focus: #{$light-white-focus};
@@ -189,77 +152,6 @@ body {
 	align-items: center;
 	box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
 	z-index: 1000;
-}
-
-.button-primary {
-	background-color: var(--color-button-primary);
-	color: var(--color-background);
-	padding: 0.75rem 1.5rem; // Default padding for desktop
-	font-size: 1rem; // Default font size for desktop
-	border-radius: 4px;
-	border: none;
-	cursor: pointer;
-	transition: all 0.3s;
-
-	&:hover {
-		background-color: var(--color-button-primary-hover);
-		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-		transform: scale(1.05);
-	}
-	&:focus {
-		background-color: var(--color-button-primary-focus);
-		box-shadow: 0 0 0 3px rgba(77, 140, 255, 0.4); // Add a soft focus ring
-		outline: none; // Remove default outline
-	}
-}
-
-.button-secondary {
-	background-color: transparent;
-	color: var(--color-button-primary);
-	padding: 0.75rem 1.5rem; // Default padding for desktop
-	font-size: 1rem; // Default font size for desktop
-	border-radius: 4px;
-	color: 2px solid var(--color-button-primary);
-	border: 2px solid var(--color-button-primary);
-	cursor: pointer;
-	transition: all 0.3s;
-
-	&:hover {
-		color: 2px solid var(--color-button-primary-hover);
-		border: 2px solid var(--color-button-primary-hover);
-		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-		transform: scale(1.05);
-	}
-	&:focus {
-		color: 2px solid var(--color-button-primary-focus);
-		border: 2px solid var(--color-button-primary-focus);
-		box-shadow: 0 0 0 3px rgba(77, 140, 255, 0.4); // Add a soft focus ring
-		outline: none; // Remove default outline
-	}
-}
-
-.button-secondary-white {
-	background-color: transparent;
-	padding: 0.6rem 1.2rem; // Default padding for desktop
-	font-size: 1rem; // Default font size for desktop
-	border-radius: 4px;
-	color: var(--color-button-secondary-white);
-	border: 2px solid var(--color-button-secondary-white);
-	cursor: pointer;
-	transition: all 0.3s;
-
-	&:hover {
-		color: 2px solid var(--color-button-secondary-white-hover);
-		border: 2px solid var(--color-button-secondary-white-hover);
-		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-		transform: scale(1.05);
-	}
-	&:focus {
-		color: 2px solid var(--color-button-secondary-white-focus);
-		border: 2px solid var(--color-button-secondary-white-focus);
-		box-shadow: 0 0 0 3px rgba(77, 140, 255, 0.4); // Add a soft focus ring
-		outline: none; // Remove default outline
-	}
 }
 
 // padding: 0.5rem 1rem;
@@ -372,7 +264,7 @@ body {
 	font-family: 'Righteous', sans-serif;
 	font-size: 4rem;
 	font-weight: bold;
-	background: var(--gradient-metallic-blue);
+	background: var(--gradient-metallic-primary);
 	background-size: 400%; /* Increased size for a smoother transition */
 	color: transparent;
 
@@ -382,4 +274,124 @@ body {
 	-ms-background-clip: text; /* Internet Explorer */
 	-o-background-clip: text; /* Older Opera */
 	background-clip: text; /* Standard */
+}
+
+.vertical-overflow {
+	height: 100%;
+	overflow-y: auto;
+	position: relative;
+}
+
+.g-8 {
+	gap: 8px;
+}
+
+.d-fr {
+	display: flex;
+	flex-direction: row;
+}
+
+.d-fc {
+	display: flex;
+	flex-direction: column;
+}
+
+.ai-fs {
+	align-items: flex-start;
+}
+
+.ai-c {
+	align-items: center;
+}
+
+.ai-fe {
+	align-items: flex-end;
+}
+
+.jc-fs {
+	justify-content: flex-start;
+}
+
+.jc-c {
+	justify-content: center;
+}
+
+.jc-fe {
+	justify-content: flex-end;
+}
+
+.p-4 {
+	padding: 4px;
+}
+
+.p-8 {
+	padding: 8px;
+}
+
+.p-16 {
+	padding: 16px;
+}
+
+.ph-4 {
+	padding-left: 4px;
+	padding-right: 4px;
+}
+
+.pv-8 {
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+
+.ph-8 {
+	padding-left: 8px;
+	padding-right: 8px;
+}
+
+.pv-8 {
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+
+.ph-16 {
+	padding-left: 16px;
+	padding-right: 16px;
+}
+
+.pv-16 {
+	padding-top: 16px;
+	padding-bottom: 16px;
+}
+
+.responsive-flex {
+	@import '$scss/_variables.scss';
+
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+
+	@media #{$desktop} {
+		flex-direction: row;
+	}
+
+	@media #{$tablet-portrait} {
+		flex-direction: row;
+	}
+
+	@media #{$tablet-landscape} {
+		flex-direction: row;
+	}
+
+	@media #{$phone-landscape} {
+		flex-direction: row;
+	}
+
+	// Phone (599px and below)
+	@media #{$phone-portrait} {
+		flex-direction: column;
+	}
+
+	// Phone (480px and below)
+	@media #{$small-screen} {
+		flex-direction: column;
+	}
 }

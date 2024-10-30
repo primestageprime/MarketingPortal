@@ -43,3 +43,31 @@
 		></path></g
 	></svg
 >
+
+<style lang="scss">
+	@import '../../scss/variables';
+	// Phone (480px and below)
+	@media #{$small-screen} {
+		svg {
+			transform: scale(0.5);
+		}
+	}
+	// Phone (599px and below)
+	@media #{$phone-portrait} {
+		svg {
+			transform: scale(0.7);
+		}
+	}
+
+	@media #{$phone-landscape} {
+		svg {
+			transform: scale(0.7);
+		}
+	}
+
+	@media #{$tablet-portrait} {
+		svg {
+			transform: scale(0.8);
+		}
+	}
+</style>

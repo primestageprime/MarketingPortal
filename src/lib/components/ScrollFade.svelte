@@ -62,7 +62,7 @@
 	});
 </script>
 
-<div bind:this={scrollContainer} class="container">
+<div class="vertical-overflow" bind:this={scrollContainer}>
 	<header bind:this={infoHeader} class="info-header">
 		<h2 class="shiny-metallic-text finite-shine">Why partner with PrimeStage?</h2>
 	</header>
@@ -140,11 +140,6 @@
 
 <style lang="scss">
 	@import '../../scss/variables';
-	.container {
-		height: 100%; /* Adjust as needed */
-		overflow-y: auto;
-		position: relative;
-	}
 
 	.section {
 		display: flex;

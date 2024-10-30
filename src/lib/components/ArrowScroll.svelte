@@ -11,7 +11,7 @@
 	}
 
 	.arrow {
-		border: solid var(--color-header-background);
+		border: solid var(--color-button-primary);
 		border-width: 0 3px 3px 0;
 		display: inline-block;
 		padding: 1rem;
