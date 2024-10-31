@@ -1,6 +1,9 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import ArrowScroll from './ArrowScroll.svelte';
+	import PeopleGroup from './icons/PeopleGroup.svelte';
+	import HeartUser from './icons/HeartUser.svelte';
+	import Process from './icons/Process.svelte';
 
 	let observedContent: NodeListOf<HTMLDivElement>;
 	let scrollIndicator: HTMLDivElement;
@@ -62,57 +65,78 @@
 	<div class="observe-node top-section" id="portal-start">
 		<h2 class="shiny-metallic-text infinite-shine">Custom web software development</h2>
 	</div>
-	<div class="observe-node">
+	<div class="observe-node responsive-flex">
 		<div class="content">
-			<h3>A Proven Team of Web Experts</h3>
-			<ul>
-				<li>Decades of combined experience</li>
-				<li>Well integrated, pre built team</li>
-				<li>Eliminates the need to build or manage your own</li>
-			</ul>
+			<div class="content-header"><h1>A Proven Team of Web Experts</h1></div>
+			<div class="content-body">
+				<ul>
+					<li>
+						<strong>Well integrated, pre built team: </strong>Eliminate the need to build or manage
+						your own software team
+					</li>
+					<li>
+						<strong>Decades of combined experience: </strong>Our team members' experience ranges
+						from 5 to over 20+ years
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="icon-content">
+			<PeopleGroup height="50%" fill="white" />
 		</div>
 	</div>
-	<div class="observe-node">
+	<div class="observe-node responsive-flex">
 		<div class="content">
-			<h3>Mature, Efficient Development Process</h3>
-			<ul>
-				<li>
-					We have honed our software development process over years of delivering successful
-					enterprise projects
-				</li>
-				<li>Structured yet flexible methodology</li>
-				<li>Strong focus on scalability, security, and performance</li>
-				<li>Full lifecycle development support</li>
-			</ul>
+			<div class="content-header"><h1>Mature, Efficient Development Process</h1></div>
+			<div class="content-body">
+				<ul>
+					<li>
+						We have honed our software development process over years of delivering successful
+						enterprise projects
+					</li>
+					<li>Structured yet flexible methodology</li>
+					<li>Strong focus on scalability, security, and performance</li>
+					<li>Full lifecycle development support</li>
+				</ul>
+			</div>
+		</div>
+		<div class="icon-content">
+			<Process height="50%" fill="white" />
 		</div>
 	</div>
-	<div class="observe-node">
+	<div class="observe-node responsive-flex">
 		<div class="content">
-			<h3>Client Oriented User Experience</h3>
-			<ul>
-				<li>
-					<strong>User-Centered Design: </strong>We focus on understanding your users’ needs,
-					behaviors, and preferences to create intuitive, user-friendly interfaces.
-				</li>
-				<li>
-					<strong>Business Familiarity: </strong>We use the business terms, language, and visuals
-					that your users and stakeholders are already comfortable with, minimizing learning curves.
-				</li>
-				<li>
-					<strong>Tailored Solutions: </strong>Whether it is custom workflows, unique business
-					logic, or specialized functionality, we build systems that align perfectly with your
-					operations.
-				</li>
-				<li>
-					<strong>Iterative Feedback: </strong>Throughout the development process, we work closely
-					with you to refine and adjust based on user feedback, ensuring the final product truly
-					meets your needs.
-				</li>
-			</ul>
+			<div class="content-header"><h1>Client Oriented User Experience</h1></div>
+			<div class="content-body">
+				<ul>
+					<li>
+						<strong>User-Centered Design: </strong>We focus on understanding your users’ needs,
+						behaviors, and preferences to create intuitive, user-friendly interfaces.
+					</li>
+					<li>
+						<strong>Business Familiarity: </strong>We use the business terms, language, and visuals
+						that your users and stakeholders are already comfortable with, minimizing learning
+						curves.
+					</li>
+					<li>
+						<strong>Tailored Solutions: </strong>Whether it is custom workflows, unique business
+						logic, or specialized functionality, we build systems that align perfectly with your
+						operations.
+					</li>
+					<li>
+						<strong>Iterative Feedback: </strong>Throughout the development process, we work closely
+						with you to refine and adjust based on user feedback, ensuring the final product truly
+						meets your needs.
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="icon-content">
+			<HeartUser height="50%" fill="white" />
 		</div>
 	</div>
-	<div class="observe-node" id="contact-form">
-		<div class="content">
+	<div class="observe-node responsive-flex" id="contact-form">
+		<div class="icon-content">
 			<a href="contact" class="button-secondary-white">Contact Us</a>
 		</div>
 	</div>
@@ -123,9 +147,9 @@
 
 	.observe-node {
 		display: flex;
-		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+
 		transition: all 0.2s ease;
 		height: 70%;
 		width: 100%;
@@ -150,13 +174,33 @@
 	}
 
 	.content {
-		height: 100%;
-		max-width: 800px;
+		flex: 1;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		align-items: center;
+		align-items: flex-start;
 		padding: 1rem;
+
+		h1 {
+			font-family: 'Righteous', sans-serif;
+		}
+	}
+
+	.content-header {
+		padding: 8px 16px;
+		flex: 1;
+	}
+
+	.content-body {
+		flex: 3;
+	}
+
+	.icon-content {
+		flex: 1;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 
 	:global(.observe-node.animate) {
@@ -176,13 +220,6 @@
 		}
 		100% {
 			background-position: 0% 50%;
-		}
-	}
-
-	@media (orientation: landscape) {
-		.content {
-			height: 80vh;
-			top: 20vh;
 		}
 	}
 
@@ -209,5 +246,25 @@
 		.shiny-metallic-text {
 			font-size: 2rem;
 		}
+	}
+
+	ul {
+		list-style-type: none; /* Remove bullet points */
+		padding: 0; /* Remove default padding */
+		margin: 0; /* Remove default margin */
+	}
+
+	ul li {
+		font-size: 1.2rem;
+		margin-bottom: 8px; /* Add space between items */
+		padding: 6px 9px; /* Add padding inside the item */
+		border-radius: 10%; /* Rounded corners */
+		transition:
+			background-color 0.3s ease,
+			box-shadow 0.3s ease; /* Smooth transitions */
+	}
+
+	ul li:hover {
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow on hover */
 	}
 </style>

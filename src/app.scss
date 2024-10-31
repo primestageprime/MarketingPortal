@@ -1,6 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 @import './scss/_variables.scss';
 
+// DELFT BLUE: #203150  (DARK SLATE BLUE)
+// YlnMn BLUE: #2E4C79 (NEUTRAL SLATE BLUE)
+// LAPIS LAZULI: #4A668E  (LIGHT SLATE BLUE)
+// HUNYADI YELLOW: #DCA648  (DULL RETRO YELLOW)
+// FLAME: #E06135  (RETRO ORANGE)
+// CARDINAL: #C72336 (RETRO RED)
+
 /* Reset default margin and padding */
 * {
 	margin: 0;
@@ -23,6 +30,7 @@ html {
 	--color-background: #{$light-white};
 	--color-header-background: #{$light-navy};
 	--color-info-section-background: #{$light-cobalt};
+	--color-info-section-background: #{$dark-indigo};
 	--color-text: #{$light-black};
 	--color-text-secondary: #{$dark-white};
 	--color-primary: #{$light-navy};

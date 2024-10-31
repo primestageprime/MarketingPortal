@@ -74,9 +74,9 @@
 		}
 
 		/* High contrast for errors */
-		&.error {
-			border-color: $error-color;
-		}
+		// &.error {
+		// 	border-color: $error-color;
+		// }
 
 		&::placeholder {
 			color: #999;
