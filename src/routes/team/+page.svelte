@@ -32,6 +32,7 @@ Risus hendrerit justo natoque metus tempus vehicula. Blandit magna tortor luctus
 		align-items: center;
 		justify-content: center;
 		height: 60%;
+		color: var(--color-text-secondary);
 	}
 	.employee-info-section:nth-child(odd) {
 		background-color: var(--color-team-section-background);

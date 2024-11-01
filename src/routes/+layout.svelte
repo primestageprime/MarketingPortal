@@ -1,15 +1,20 @@
 <script>
-	import PsLogoWithText from '$lib/components/PsLogoWithText.svelte';
+	import PsLogo2 from '$lib/components/icons/PsLogo2.svelte';
 	import '../app.scss';
 	import '../scss/index.scss';
 </script>
 
 <header class="header">
-	<a href="/"><div class="logo"><PsLogoWithText /></div></a>
+	<a href="/"
+		><div class="logo">
+			<PsLogo2 strokeColor={'#e06135'} outerStrokeColor={'#dca648'} height="6rem" width="6rem" />
+			<h1 class="shiny-metallic-text-cyan">PrimeStage</h1>
+		</div></a
+	>
 	<div class="header-actions">
-		<a href="about" class="button-secondary-white nav-link">About</a>
-		<a href="team" class="button-secondary-white nav-link">Meet The Team</a>
-		<a href="contact" class="button-secondary-white nav-link">Contact</a>
+		<a href="about" class="button-accent-gold nav-link">About</a>
+		<a href="team" class="button-accent-orange nav-link">Meet The Team</a>
+		<a href="contact" class="button-accent-red nav-link">Contact</a>
 		<div class="menu">menu</div>
 	</div>
 </header>
@@ -29,12 +34,17 @@
 		flex: 1;
 		overflow: hidden;
 	}
-	.logo {
-		font-size: 30px;
-		font-weight: 100;
-		letter-spacing: 0.1rem;
-		display: flex;
-		align-items: center;
+
+	a {
+		text-decoration: none;
+
+		.logo {
+			font-size: 30px;
+			letter-spacing: 0.1rem;
+			display: flex;
+			align-items: center;
+			font-family: 'Righteous', sans-serif;
+		}
 	}
 
 	.menu {

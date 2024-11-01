@@ -18,6 +18,7 @@ $shiny-metallic-neutral: linear-gradient(
 	#414448,
 	#262729
 );
+$shiny-metallic-cyan: linear-gradient(135deg, #18abb5, #5cdae3, #a6f5fb, #5cdae3, #18abb5, #01666d);
 $shiny-metallic-blue: linear-gradient(135deg, #4667ae, #7792c6, #c0d2fb, #7792c6, #4667ae, #224795);
 $shiny-metallic-red: linear-gradient(135deg, #cf3c3c, #d16a6a, #fbc0c0, #c67777, #ae4646, #c80f0f);
 
@@ -93,3 +94,62 @@ $dark-cobalt-focus: rgb(57, 80, 114);
 $dark-purple: #7d3dff;
 $dark-purple-hover: #6935e6;
 $dark-purple-focus: #552abf;
+
+// NEW COLOR PALETTE:
+
+// Dark Mode Palette
+$dark-primary-bg: #203150; // Dark blue hue - Primary background
+$dark-primary-bg-hover: #2a3e5e; // Lighter blue hue for hover effect
+$dark-primary-bg-focus: #32486c; // Slightly lighter blue hue for focus effect
+
+$dark-secondary-bg: #2e4c79; // Medium dark blue hue - Secondary background
+$dark-secondary-bg-hover: #3a5c8c; // Lighter medium blue for hover effect
+$dark-secondary-bg-focus: #426699; // Slightly lighter medium blue for focus effect
+
+$dark-primary-text: #f0f0f0; // Light gray hue - Primary text (almost white)
+$dark-primary-text-hover: #ffffff; // Pure white for hover effect
+$dark-primary-text-focus: #f8f8f8; // Slightly lighter gray for focus effect
+
+$dark-accent-gold: #dca648; // Warm gold hue - Accent color for highlights
+$dark-accent-gold-hover: #e2b760; // Lighter gold hue for hover effect
+$dark-accent-gold-focus: #e5c370; // Slightly lighter gold hue for focus effect
+
+$dark-accent-orange: #e06135; // Warm orange hue - Accent color for active elements
+$dark-accent-orange-hover: #e77a50; // Lighter orange hue for hover effect
+$dark-accent-orange-focus: #e98d66; // Slightly lighter orange hue for focus effect
+
+$dark-accent-red: #c72336; // Warm red hue - Accent color for alerts or emphasis
+$dark-accent-red-hover: #d43a4a; // Lighter red hue for hover effect
+$dark-accent-red-focus: #d9515e; // Slightly lighter red hue for focus effect
+
+// Light Mode Palette
+$light-primary-bg: #f3f7fb; // Very light blue hue - Primary background
+$light-primary-bg-hover: #e5eff7; // Darker light blue for hover effect
+$light-primary-bg-focus: #dce9f4; // Slightly darker light blue for focus effect
+
+$light-secondary-bg: #e1ecf3; // Pale blue hue - Secondary background
+$light-secondary-bg-hover: #d1dfec; // Darker pale blue for hover effect
+$light-secondary-bg-focus: #c6d5e6; // Slightly darker pale blue for focus effect
+
+$light-primary-text: #1a2430; // Very dark blue hue - Primary text (close to black)
+$light-primary-text-hover: #0f1720; // Darker blue for hover effect
+$light-primary-text-focus: #141c27; // Slightly darker blue for focus effect
+
+$light-accent-gold: #dca648; // Warm gold hue - Accent color for buttons or call-to-action elements
+$light-accent-gold-hover: #c69740; // Darker gold hue for hover effect
+$light-accent-gold-focus: #b58638; // Slightly darker gold hue for focus effect
+
+$light-accent-orange: #e06135; // Warm orange hue - Accent color for active or hover states
+$light-accent-orange-hover: #c8502e; // Darker orange hue for hover effect
+$light-accent-orange-focus: #b64529; // Slightly darker orange hue for focus effect
+
+$light-accent-red: #c72336; // Warm red hue - Accent color for warnings or important notifications
+$light-accent-red-hover: #a91d2d; // Darker red hue for hover effect
+$light-accent-red-focus: #931826; // Slightly darker red hue for focus effect
+
+// #203150:  DELFT BLUE:   (DARK SLATE BLUE)
+// #2E4C79:  YlnMn BLUE:  (NEUTRAL SLATE BLUE)
+// #4A668E:  LAPIS LAZULI:   (LIGHT SLATE BLUE)
+// #DCA648:  HUNYADI YELLOW:   (DULL RETRO YELLOW)
+// #E06135:  FLAME:   (RETRO ORANGE)
+// #C72336:  CARDINAL:  (RETRO RED)

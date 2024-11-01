@@ -1,13 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 @import './scss/_variables.scss';
 
-// DELFT BLUE: #203150  (DARK SLATE BLUE)
-// YlnMn BLUE: #2E4C79 (NEUTRAL SLATE BLUE)
-// LAPIS LAZULI: #4A668E  (LIGHT SLATE BLUE)
-// HUNYADI YELLOW: #DCA648  (DULL RETRO YELLOW)
-// FLAME: #E06135  (RETRO ORANGE)
-// CARDINAL: #C72336 (RETRO RED)
-
 /* Reset default margin and padding */
 * {
 	margin: 0;
@@ -25,14 +18,16 @@ html {
 // Theme Variables
 :root {
 	// Light Theme
+	--gradient-metallic-primary: #{$shiny-metallic-neutral};
+	--gradient-metallic-cyan: #{$shiny-metallic-cyan};
 	--gradient-metallic-blue: #{$shiny-metallic-blue};
 	--gradient-metallic-red: #{$shiny-metallic-red};
-	--color-background: #{$light-white};
-	--color-header-background: #{$light-navy};
-	--color-info-section-background: #{$light-cobalt};
-	--color-info-section-background: #{$dark-indigo};
+	--color-background-primary: #{$dark-primary-bg};
+	--color-background-primary-header: #{$dark-navy};
+	--color-info-section-background: #{$dark-secondary-bg};
+	--color-team-section-background: #{$dark-secondary-bg};
 	--color-text: #{$light-black};
-	--color-text-secondary: #{$dark-white};
+	--color-text-secondary: #{$dark-primary-text};
 	--color-primary: #{$light-navy};
 	--color-secondary: #{$light-purple};
 	--color-gray: #{$light-gray};
@@ -40,73 +35,23 @@ html {
 	--color-button-primary: #{$light-navy};
 	--color-button-primary-hover: #{$light-navy-hover};
 	--color-button-primary-focus: #{$light-navy-focus};
-	--color-button-secondary-white: #{$light-white};
-	--color-button-secondary-white-hover: #{$light-white-hover};
-	--color-button-secondary-white-focus: #{$light-white-focus};
-}
-
-// Dark Theme
-[data-theme='dark'] {
-	--gradient-metallic-primary: #{$shiny-metallic-neutral};
-	--color-background: #{$dark-black};
-	--color-header-background: #{$dark-sienna};
-	--color-text: #{$dark-white};
-	--color-text-secondary: #{$light-black};
-	--color-primary: #{$dark-navy};
-	--color-secondary: #{$dark-purple};
-	--color-gray: #{$dark-gray};
-	--color-dark-gray: #{$dark-dark-gray};
-	--color-button-primary: #{$dark-navy};
-	--color-button-primary-hover: #{$dark-navy-hover};
-	--color-button-primary-focus: #{$dark-navy-focus};
-	--color-button-secondary-white: #{$light-white};
-	--color-button-secondary-white-hover: #{$light-white-hover};
-	--color-button-secondary-white-focus: #{$light-white-focus};
-}
-
-[data-theme='dark-red'] {
-	--gradient-metallic-primary: #{$shiny-metallic-red};
-	--color-background: #{$dark-black};
-	--color-header-background: #{$dark-red};
-	--color-info-section-background: #{$light-sienna};
-	--color-team-section-background: #{$dark-orange};
-	--color-text: #{$dark-white};
-	--color-text-secondary: #{$light-black};
-	--color-primary: #{$dark-red};
-	--color-secondary: #{$dark-purple};
-	--color-gray: #{$dark-gray};
-	--color-dark-gray: #{$dark-dark-gray};
-	--color-button-primary: #{$dark-red};
-	--color-button-primary-hover: #{$dark-red-hover};
-	--color-button-primary-focus: #{$dark-red-focus};
-	--color-button-secondary-white: #{$light-white};
-	--color-button-secondary-white-hover: #{$light-white-hover};
-	--color-button-secondary-white-focus: #{$light-white-focus};
-}
-
-[data-theme='dark-navy'] {
-	--gradient-metallic-primary: #{$shiny-metallic-blue};
-	--color-background: #{$dark-black};
-	--color-header-background: #{$dark-navy};
-	--color-info-section-background: #{$light-cobalt};
-	--color-team-section-background: #{$dark-indigo};
-	--color-text: #{$dark-white};
-	--color-text-secondary: #{$light-black};
-	--color-primary: #{$dark-navy};
-	--color-secondary: #{$dark-purple};
-	--color-gray: #{$dark-gray};
-	--color-dark-gray: #{$dark-dark-gray};
-	--color-button-primary: #{$light-navy};
-	--color-button-primary-hover: #{$light-navy-hover};
-	--color-button-primary-focus: #{$light-navy-focus};
-	--color-button-secondary-white: #{$light-white};
-	--color-button-secondary-white-hover: #{$light-white-hover};
-	--color-button-secondary-white-focus: #{$light-white-focus};
+	--color-button-secondary-white: #{$dark-primary-text};
+	--color-button-secondary-white-hover: #{$dark-primary-text-hover};
+	--color-button-secondary-white-focus: #{$dark-primary-text-focus};
+	--color-button-accent-gold: #{$dark-accent-gold};
+	--color-button-accent-gold-hover: #{$dark-accent-gold-hover};
+	--color-button-accent-gold-focus: #{$dark-accent-gold-focus};
+	--color-button-accent-orange: #{$dark-accent-orange};
+	--color-button-accent-orange-hover: #{$dark-accent-orange-hover};
+	--color-button-accent-orange-focus: #{$dark-accent-orange-focus};
+	--color-button-accent-red: #{$dark-accent-red};
+	--color-button-accent-red-hover: #{$dark-accent-red-hover};
+	--color-button-accent-red-focus: #{$dark-accent-red-focus};
 }
 
 // Base Styles
 body {
-	background-color: var(--color-background);
+	background-color: var(--color-background-primary);
 	color: var(--color-text);
 	font-family: Arial, sans-serif;
 	margin: 0;
@@ -117,25 +62,12 @@ body {
 	flex-direction: column;
 }
 
-// Utility classes
-.primary {
-	color: var(--color-primary);
-}
-
-.secondary {
-	color: var(--color-secondary);
-}
-
-.gray {
-	color: var(--color-gray);
-}
-
 // Floating Header
 .header {
 	height: 10vh;
 	width: 100%;
 	padding: 1rem 6rem;
-	background-color: var(--color-header-background);
+	background-color: var(--color-background-primary-header);
 	color: var(--color-white);
 	font-size: 1rem; // Adjusts with body font size
 	display: flex;
@@ -152,7 +84,7 @@ body {
 	left: 0;
 	width: 100%;
 	padding: 1rem 2rem;
-	background-color: var(--color-header-background);
+	background-color: var(--color-background-primary-header);
 	color: var(--color-white);
 	font-size: 1rem; // Adjusts with body font size
 	display: flex;
@@ -274,6 +206,22 @@ body {
 	font-weight: bold;
 	background: var(--gradient-metallic-primary);
 	background-size: 400%; /* Increased size for a smoother transition */
+	color: transparent;
+
+	/* Vendor prefixes for compatibility */
+	-webkit-background-clip: text; /* Safari, Chrome */
+	-moz-background-clip: text; /* Firefox (not always needed) */
+	-ms-background-clip: text; /* Internet Explorer */
+	-o-background-clip: text; /* Older Opera */
+	background-clip: text; /* Standard */
+}
+
+.shiny-metallic-text-cyan {
+	font-family: 'Righteous', sans-serif;
+	font-size: 4rem;
+	font-weight: bold;
+	background: var(--gradient-metallic-cyan);
+	background-size: 100%;
 	color: transparent;
 
 	/* Vendor prefixes for compatibility */
