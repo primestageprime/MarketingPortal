@@ -209,29 +209,6 @@
 		opacity: 1;
 	}
 
-	.infinite-shine {
-		animation: shine 6s infinite ease-in-out;
-	}
-
-	.shiny-metallic-text.finite-shine {
-		width: 80%;
-		animation: shine 3s linear 1;
-		text-align: center;
-		font-size: 3rem;
-	}
-
-	@keyframes shine {
-		0% {
-			background-position: 0% 50%;
-		}
-		50% {
-			background-position: 75% 25%;
-		}
-		100% {
-			background-position: 0% 50%;
-		}
-	}
-
 	@keyframes fadeInOut {
 		0% {
 			opacity: 0;

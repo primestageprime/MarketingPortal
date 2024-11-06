@@ -5,9 +5,8 @@ $phone-portrait: '(max-width: 599px) and (orientation: portrait)';
 $phone-landscape: '(max-width: 850px) and (orientation: landscape)';
 $tablet-portrait: '(min-width: 600px) and (max-width: 1024px)  and (orientation: portrait)';
 $tablet-landscape: '(min-width: 600px) and (max-width: 1024px) and (orientation: landscape)';
-$desktop: '(min-width: 1025px)';
-
-// Colors
+$desktop: '(min-width: 1024px) and (max-width: 2240px)';
+$high-res-desktop: '(min-width: 2241px)';
 
 $shiny-metallic-neutral: linear-gradient(
 	135deg,

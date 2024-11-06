@@ -10,7 +10,7 @@
 			name="message"
 			placeholder="Let us know how we can help launch your vision into outer orbit."
 		/>
-		<button class="button-primary" type="submit">Submit</button>
+		<button class="button-secondary-white" type="submit">Submit</button>
 	</form>
 </div>
 

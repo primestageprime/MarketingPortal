@@ -63,7 +63,7 @@
 		<ArrowScroll />
 	</div>
 	<div class="observe-node top-section" id="portal-start">
-		<h2 class="shiny-metallic-text infinite-shine">Custom web software development</h2>
+		<h2 class="shiny-metallic-text infinite-shine bold font-size-4">Custom web development</h2>
 	</div>
 	<div class="observe-node responsive-flex">
 		<div class="content">
@@ -238,6 +238,12 @@
 	}
 
 	@media #{$tablet-landscape} {
+		.shiny-metallic-text {
+			font-size: 2rem;
+		}
+	}
+
+	@media #{$tablet-portrait} {
 		.shiny-metallic-text {
 			font-size: 2rem;
 		}

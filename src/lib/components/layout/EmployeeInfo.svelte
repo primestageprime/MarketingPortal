@@ -1,11 +1,15 @@
 <script>
 	export let imageSrc;
 	export let aboutMe;
+	export let fullName;
 </script>
 
 <div class="responsive-flex employee-card">
 	<img src={imageSrc} alt="Employee avatar" loading="lazy" />
-	<div class="about-me">{aboutMe}</div>
+	<div class="d-fc">
+		<div class="fullName">{fullName}</div>
+		<div class="about-me">{aboutMe}</div>
+	</div>
 </div>
 
 <style>
@@ -18,7 +22,12 @@
 		width: 200px;
 		height: 200px;
 		object-fit: cover;
-		border-radius: 50%;
+		border-radius: 30%;
+	}
+	.fullName {
+		padding: 8px;
+		font-family: 'Righteous', sans-serif;
+		font-size: 2rem;
 	}
 
 	.about-me {
