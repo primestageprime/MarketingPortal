@@ -1,6 +1,5 @@
 <script>
-	// import ScrollFade from '$lib/components/ScrollFade.svelte';
-	import ScrollWithIndicator from '$lib/components/ScrollWithIndicator.svelte';
+	import HomePage from '$lib/components/HomePage.svelte';
 </script>
 
-<ScrollWithIndicator />
+<HomePage />

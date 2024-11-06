@@ -1,4 +1,4 @@
-<svg width="3.2rem" height="2rem" viewBox="0 0 80 58" class="looka-1j8o68f"
+<svg viewBox="0 0 80 58" class="looka-1j8o68f" {...$$restProps}
 	><defs id="SvgjsDefs2081"></defs><g
 		id="SvgjsG2082"
 		transform="matrix(0.8377815458759871,0,0,0.8377815458759871,-2.5175338409765162,-7.604399224222238)"

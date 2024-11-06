@@ -344,9 +344,11 @@ svg {
 	padding-bottom: 16px;
 }
 
-.responsive-flex {
-	@import '$scss/_variables.scss';
+.full-opacity {
+	opacity: 1;
+}
 
+.responsive-flex {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
