@@ -1,4 +1,5 @@
 <script>
+	import NavMenu from '$lib/components/icons/NavMenu.svelte';
 	import PsLogo2 from '$lib/components/icons/PsLogo2.svelte';
 	import '../app.scss';
 	import '../scss/index.scss';
@@ -7,15 +8,15 @@
 <header class="header">
 	<a href="/"
 		><div class="logo">
-			<PsLogo2 strokeColor={'#e06135'} outerStrokeColor={'#dca648'} height="6rem" width="6rem" />
-			<h1 class="shiny-metallic-text-cyan">PrimeStage</h1>
+			<PsLogo2 strokeColor={'#5cdae3'} outerStrokeColor={'#5cdae3'} height="3rem" width="3rem" />
+			<h1 class="shiny-metallic-text-cyan bold font-size-3">PrimeStage</h1>
 		</div></a
 	>
 	<div class="header-actions">
 		<a href="about" class="button-accent-gold nav-link">About</a>
 		<a href="team" class="button-accent-orange nav-link">Meet The Team</a>
 		<a href="contact" class="button-accent-red nav-link">Contact</a>
-		<div class="menu">menu</div>
+		<div class="menu"><NavMenu fill="white" width="30px" height="30px" /></div>
 	</div>
 </header>
 <main>
@@ -71,8 +72,20 @@
 
 	@media #{$tablet-portrait} {
 		.nav-link {
-			display: inline-block;
+			display: none;
 			transform: scale(0.9);
+		}
+		.menu {
+			display: block;
+		}
+	}
+	@media #{$tablet-landscape} {
+		.nav-link {
+			display: none;
+			transform: scale(0.9);
+		}
+		.menu {
+			display: block;
 		}
 	}
 </style>

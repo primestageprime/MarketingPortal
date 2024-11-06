@@ -60,13 +60,25 @@ body {
 	height: 100vh;
 	display: flex;
 	flex-direction: column;
+	min-width: 420px;
 }
 
-// Floating Header
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+svg {
+	transition: all 0.5s ease;
+}
+
 .header {
 	height: 10vh;
 	width: 100%;
-	padding: 1rem 6rem;
+	padding: 1rem 2rem;
 	background-color: var(--color-background-primary-header);
 	color: var(--color-white);
 	font-size: 1rem; // Adjusts with body font size
@@ -119,6 +131,11 @@ body {
 }
 
 // Media Queries for Scaling
+@media #{$high-res-desktop} {
+	.header {
+		height: 5vh;
+	}
+}
 
 // Tablet (768px and below)
 @media #{$tablet-portrait} {
@@ -183,9 +200,6 @@ body {
 		padding: 0.4rem 0.6rem;
 		font-size: 0.85rem;
 	}
-	.header {
-		height: 10vh;
-	}
 }
 
 @media #{$phone-landscape} {
@@ -195,15 +209,30 @@ body {
 		padding: 0.4rem 0.6rem;
 		font-size: 0.85rem;
 	}
-	.header {
-		height: 10vh;
-	}
+}
+
+.font-size-2 {
+	font-size: 2rem;
+}
+.font-size-3 {
+	font-size: 3rem;
+}
+.font-size-4 {
+	font-size: 4rem;
+}
+.font-size-5 {
+	font-size: 5rem;
+}
+
+.righteous {
+	font-family: 'Righteous', sans-serif;
+}
+
+.bold {
+	font-weight: bold;
 }
 
 .shiny-metallic-text {
-	font-family: 'Righteous', sans-serif;
-	font-size: 4rem;
-	font-weight: bold;
 	background: var(--gradient-metallic-primary);
 	background-size: 400%; /* Increased size for a smoother transition */
 	color: transparent;
@@ -217,11 +246,8 @@ body {
 }
 
 .shiny-metallic-text-cyan {
-	font-family: 'Righteous', sans-serif;
-	font-size: 4rem;
-	font-weight: bold;
 	background: var(--gradient-metallic-cyan);
-	background-size: 100%;
+	background-size: 400%;
 	color: transparent;
 
 	/* Vendor prefixes for compatibility */
@@ -349,5 +375,25 @@ body {
 	// Phone (480px and below)
 	@media #{$small-screen} {
 		flex-direction: column;
+	}
+}
+
+.infinite-shine {
+	animation: shine 6s infinite ease-in-out;
+}
+
+.finite-shine {
+	animation: shine 3s linear 2;
+}
+
+@keyframes shine {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 75% 25%;
+	}
+	100% {
+		background-position: 0% 50%;
 	}
 }

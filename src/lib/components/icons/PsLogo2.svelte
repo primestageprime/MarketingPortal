@@ -24,30 +24,22 @@
 	];
 </script>
 
-<div>
-	<svg
-		width="200"
-		height="200"
-		viewBox="-100 -100 200 200"
-		xmlns="http://www.w3.org/2000/svg"
-		{...$$restProps}
-	>
-		<!-- Center Circle -->
-		<circle
-			cx="0"
-			cy="0"
-			r={centerRadius}
-			fill={fillColor}
-			stroke={strokeColor}
-			style={centerStyle}
-		/>
+<svg viewBox="-60 -60 120 120" xmlns="http://www.w3.org/2000/svg" {...$$restProps}>
+	<!-- Center Circle -->
+	<circle
+		cx="0"
+		cy="0"
+		r={centerRadius}
+		fill={fillColor}
+		stroke={strokeColor}
+		style={centerStyle}
+	/>
 
-		<!-- Surrounding Circles -->
-		{#each outerCircles as [cx, cy]}
-			<circle {cx} {cy} r={radius} fill={fillColor} style={outerStyle} stroke={outerStrokeColor} />
-		{/each}
-	</svg>
-</div>
+	<!-- Surrounding Circles -->
+	{#each outerCircles as [cx, cy]}
+		<circle {cx} {cy} r={radius} fill={fillColor} style={outerStyle} stroke={outerStrokeColor} />
+	{/each}
+</svg>
 
 <style lang="css">
 	div {
