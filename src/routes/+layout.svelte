@@ -10,7 +10,7 @@
 	<a href="/"
 		><div class="logo">
 			<PsLogo2 strokeColor={'#cbfcff'} outerStrokeColor={'#cbfcff'} height="3rem" width="3rem" />
-			<h1 class="shiny-metallic-text-cyan bold font-size-3">PrimeStage</h1>
+			<h1 class="company-name bold font-size-3">PrimeStage</h1>
 		</div></a
 	>
 	<div class="header-actions">
@@ -36,6 +36,10 @@
 
 <style lang="scss">
 	@import '../scss/variables';
+
+	.company-name {
+		color: #48f3ff;
+	}
 
 	.header-actions {
 		display: flex;
