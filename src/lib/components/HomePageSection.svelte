@@ -75,10 +75,6 @@
 		padding: 8px 16px;
 	}
 
-	.content-body {
-		flex: 3;
-	}
-
 	.icon-content {
 		flex: 1;
 		display: flex;

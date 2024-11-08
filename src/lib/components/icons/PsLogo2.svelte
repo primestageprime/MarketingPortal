@@ -40,9 +40,3 @@
 		<circle {cx} {cy} r={radius} fill={fillColor} style={outerStyle} stroke={outerStrokeColor} />
 	{/each}
 </svg>
-
-<style lang="css">
-	div {
-		margin: 0;
-	}
-</style>
