@@ -1,4 +1,5 @@
 <script>
+	import DropdownMenu from '$lib/components/DropdownMenu.svelte';
 	import NavMenu from '$lib/components/icons/NavMenu.svelte';
 	import PsLogo2 from '$lib/components/icons/PsLogo2.svelte';
 	import '../app.scss';
@@ -8,7 +9,7 @@
 <header class="header">
 	<a href="/"
 		><div class="logo">
-			<PsLogo2 strokeColor={'#5cdae3'} outerStrokeColor={'#5cdae3'} height="3rem" width="3rem" />
+			<PsLogo2 strokeColor={'#cbfcff'} outerStrokeColor={'#cbfcff'} height="3rem" width="3rem" />
 			<h1 class="shiny-metallic-text-cyan bold font-size-3">PrimeStage</h1>
 		</div></a
 	>
@@ -16,7 +17,17 @@
 		<a href="about" class="button-accent-gold nav-link">About</a>
 		<a href="team" class="button-accent-orange nav-link">Meet The Team</a>
 		<a href="contact" class="button-accent-red nav-link">Contact</a>
-		<div class="menu"><NavMenu fill="white" width="30px" height="30px" /></div>
+		<div class="menu">
+			<DropdownMenu
+				items={[
+					{ label: 'About', href: '/about' },
+					{ label: 'Meet The Team', href: '/team' },
+					{ label: 'Contact', href: '/contact' }
+				]}
+			>
+				<NavMenu fill="white" width="30px" height="30px" slot="trigger" />
+			</DropdownMenu>
+		</div>
 	</div>
 </header>
 <main>
