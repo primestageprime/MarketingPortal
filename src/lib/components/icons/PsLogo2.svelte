@@ -2,12 +2,12 @@
 	export let strokeColor;
 	export let outerStrokeColor;
 	const centerRadius = 23;
-	const radius = 14;
+	const radius = 12;
 	const fillColor = 'transparent';
 
-	const strokeWidth = 5;
+	const strokeWidth = 4;
 	const centerStyle = `stroke-width: ${strokeWidth}px; `;
-	const outerStrokeWidth = 5;
+	const outerStrokeWidth = 4;
 	const outerStyle = `stroke-width: ${outerStrokeWidth}px;`;
 
 	const rad = 28.28;
