@@ -14,7 +14,6 @@
 
 <style>
 	.employee-card {
-		max-height: 600px;
 		gap: 1rem;
 	}
 

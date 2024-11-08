@@ -30,8 +30,9 @@
 	.employee-info-section {
 		align-items: center;
 		justify-content: center;
-		height: 60%;
+		min-height: 60%;
 		color: var(--color-text-secondary);
+		padding: 16px;
 	}
 	.employee-info-section:nth-child(odd) {
 		background-color: var(--color-team-section-background);

@@ -87,6 +87,7 @@ svg {
 	align-items: center;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 	z-index: 1000;
+	transition: all 0.5s ease;
 }
 
 // Footer
@@ -133,7 +134,7 @@ svg {
 // Media Queries for Scaling
 @media #{$high-res-desktop} {
 	.header {
-		height: 5vh;
+		height: 7vh;
 	}
 }
 
@@ -352,6 +353,7 @@ svg {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
+	transition: all 0.5s ease;
 
 	@media #{$desktop} {
 		flex-direction: row;

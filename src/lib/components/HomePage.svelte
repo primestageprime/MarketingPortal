@@ -5,7 +5,7 @@
 	import HeartUser from './icons/HeartUser.svelte';
 	import Process from './icons/Process.svelte';
 	import HomePageSection from './HomePageSection.svelte';
-	import PsLogo from './icons/PsLogo.svelte';
+	import CircuitBoard from './icons/CircuitBoard.svelte';
 
 	let scrollIndicator: HTMLDivElement;
 	let scrollContainer: HTMLDivElement;
@@ -44,9 +44,9 @@
 			},
 			{
 				label: 'Decades of combined experience',
-				content: 'Our team members experience ranges from 5 to over 20+ years'
+				content: "Our team members' experience ranges from 5 to over 20+ years"
 			}
-		]}><PeopleGroup height="50%" fill="white" slot="icon-content" /></HomePageSection
+		]}><PeopleGroup height="200px" fill="#a6a6a6" slot="icon-content" /></HomePageSection
 	>
 	<HomePageSection
 		header={'Mature, Efficient Development Process'}
@@ -61,10 +61,10 @@
 				content:
 					'Our team members have experience building for enterprises with sensitive information systems that can handle millions to hundreds of millions of datapoints efficiently'
 			}
-		]}><Process height="50%" fill="white" slot="icon-content" /></HomePageSection
+		]}><Process height="200px" fill="#a6a6a6" slot="icon-content" /></HomePageSection
 	>
 	<HomePageSection
-		header={'Our Philosophy: Make it Work, Make it Right, Make it Fast, Make it Small'}
+		header={'Our Philosophy'}
 		bulletpoints={[
 			{
 				label: 'Make it Work',
@@ -72,7 +72,7 @@
 			},
 			{
 				label: 'Make it Right',
-				content: 'Harden the application and ensure that it meets all your needs'
+				content: 'Expand and harden the application and ensure that it meets all your needs'
 			},
 			{
 				label: 'Make it Fast',
@@ -83,7 +83,7 @@
 				content:
 					"Ensure that we're only using what we need to so we can minimize cost and maintenance"
 			}
-		]}><PsLogo height="50%" fill="white" slot="icon-content" /></HomePageSection
+		]}><CircuitBoard height="200px" fill="#a6a6a6" slot="icon-content" /></HomePageSection
 	>
 	<HomePageSection
 		header={'Client Oriented User Experience'}
@@ -108,7 +108,7 @@
 				content:
 					'Throughout the development process, we work closely with you to refine and adjust based on user feedback, ensuring the final product truly meets your needs'
 			}
-		]}><HeartUser height="50%" fill="white" slot="icon-content" /></HomePageSection
+		]}><HeartUser height="200px" fill="#a6a6a6" slot="icon-content" /></HomePageSection
 	>
 	<div class="home-section responsive-flex" id="contact-form">
 		<div class="icon-content">
@@ -163,25 +163,25 @@
 	// Phone (480px and below)
 	@media #{$small-screen} {
 		.shiny-metallic-text {
-			font-size: 2rem;
+			font-size: 2.2rem;
 		}
 	}
 	// Phone (599px and below)
 	@media #{$phone-portrait} {
 		.shiny-metallic-text {
-			font-size: 2rem;
+			font-size: 2.2rem;
 		}
 	}
 
 	@media #{$tablet-landscape} {
 		.shiny-metallic-text {
-			font-size: 2rem;
+			font-size: 2.4rem;
 		}
 	}
 
 	@media #{$tablet-portrait} {
 		.shiny-metallic-text {
-			font-size: 2rem;
+			font-size: 2.4rem;
 		}
 	}
 
