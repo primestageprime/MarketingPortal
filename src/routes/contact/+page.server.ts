@@ -1,56 +1,40 @@
 import type { Actions } from './$types';
-import nodemailer from 'nodemailer';
 import dotenv from 'dotenv';
-import { superValidate } from 'sveltekit-superforms/server';
-import chalk from 'chalk';
-import { emailFormSchema } from './constants';
+import { fail } from '@sveltejs/kit';
+import sgMail from '@sendgrid/mail';
 
 dotenv.config();
 
-const smtpPort = process.env.SMTP_PORT as string;
-const smtpPortNumeric = parseInt(smtpPort, 10);
+const emailUser = process.env.EMAIL_USER as string;
+const sendGridApiKey = process.env.SENDGRID_API_KEY as string;
+
+// Configure SendGrid with the API key
+sgMail.setApiKey(sendGridApiKey);
 
 export const actions: Actions = {
 	default: async ({ request }) => {
 		const formData = await request.formData();
 
-		// const validation = await superValidate(formData, emailFormSchema);
-
-		// if (!validation.valid) {
-		// 	// Return validation errors to the form
-		// 	return { errors: validation.errors };
-		// }
-
-		const name = formData.get('name');
-		const email = formData.get('email');
+		const name = formData.get('name') as string | undefined;
+		const email = formData.get('email') as string | undefined;
 		const message = formData.get('message') as string | undefined;
 
-		// Set up Nodemailer transporter
-		const transporter = nodemailer.createTransport({
-			host: process.env.SMTP_HOST,
-			port: smtpPortNumeric,
-			secure: smtpPortNumeric == 465, // true for port 465, false for other ports
-			auth: {
-				user: process.env.EMAIL_USER,
-				pass: process.env.EMAIL_PASS
-			}
-		});
+		if (!name || !email || !message) {
+			return fail(400, { error: 'All fields are required.' });
+		}
 
 		try {
-			// Send email
-			await transporter.sendMail({
-				from: process.env.EMAIL_USER, // Must match the authenticated email
-				replyTo: `${name} <${email}>`, // Sets the reply-to to the user's email
-				to: 'info@primestagetechnology.com',
+			// Send email using SendGrid
+			await sgMail.send({
+				from: {
+					email: emailUser, // Use your verified SendGrid sender email here
+					name: `${name} via Contact Form`
+				},
+				to: 'info@yourcompany.com', // Replace with your recipient email
 				subject: `Contact Form Submission from ${name}`,
-				text: message ? message : ''
+				text: message,
+				replyTo: email // This will allow the recipient to reply to the user's email
 			});
-			console.info(
-				chalk.bgBlueBright(
-					'SENDING CONTACT FORM EMAIL',
-					JSON.stringify({ name, email, message }, null, 2)
-				)
-			);
 
 			return { success: true };
 		} catch (error) {
