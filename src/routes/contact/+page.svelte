@@ -1,5 +1,10 @@
+<script lang="ts">
+	import { slide } from 'svelte/transition';
+	import { enhance } from '$app/forms';
+</script>
+
 <div class="w-100 h-100 d-fr jc-c ai-c">
-	<form class="contact-form d-fc ph-16 pv-8">
+	<form method="POST" transition:slide class="contact-form d-fc ph-16 pv-8" use:enhance>
 		<label for="name">Name</label>
 		<input required name="name" placeholder="Name" type="text" />
 		<label for="email">Email</label>
@@ -10,7 +15,7 @@
 			name="message"
 			placeholder="Let us know how we can help launch your vision into outer orbit."
 		/>
-		<button class="button-secondary-white" type="submit">Submit</button>
+		<button class="button-secondary-white" type="submit"> Send Message</button>
 	</form>
 </div>
 
