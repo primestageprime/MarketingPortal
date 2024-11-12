@@ -6,6 +6,7 @@
 	import Process from './icons/Process.svelte';
 	import HomePageSection from './HomePageSection.svelte';
 	import CircuitBoard from './icons/CircuitBoard.svelte';
+	import { slide } from 'svelte/transition';
 
 	let scrollIndicator: HTMLDivElement;
 	let scrollContainer: HTMLDivElement;
@@ -28,7 +29,7 @@
 	});
 </script>
 
-<div class="vertical-overflow" bind:this={scrollContainer}>
+<div transition:slide class="vertical-overflow" bind:this={scrollContainer}>
 	<div bind:this={scrollIndicator} class="scroll-indicator">
 		<ArrowScroll />
 	</div>

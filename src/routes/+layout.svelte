@@ -35,7 +35,7 @@
 </main>
 
 <style lang="scss">
-	@import '../scss/variables';
+	@import '$scss/variables';
 
 	.company-name {
 		color: #48f3ff;

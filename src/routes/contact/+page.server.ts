@@ -2,10 +2,11 @@ import type { Actions } from './$types';
 import dotenv from 'dotenv';
 import { fail } from '@sveltejs/kit';
 import sgMail from '@sendgrid/mail';
+import chalk from 'chalk';
 
 dotenv.config();
 
-const emailUser = process.env.EMAIL_USER as string;
+const sendGridEmail = process.env.EMAIL_USER as string;
 const sendGridApiKey = process.env.SENDGRID_API_KEY as string;
 
 // Configure SendGrid with the API key
@@ -26,19 +27,20 @@ export const actions: Actions = {
 		try {
 			// Send email using SendGrid
 			await sgMail.send({
-				from: {
-					email: emailUser, // Use your verified SendGrid sender email here
-					name: `${name} via Contact Form`
-				},
-				to: 'info@yourcompany.com', // Replace with your recipient email
-				subject: `Contact Form Submission from ${name}`,
+				from: sendGridEmail,
+				to: 'info@primestagetechnology.com',
+				subject: `Contact Form Submission from ${name} <${email}>`,
 				text: message,
-				replyTo: email // This will allow the recipient to reply to the user's email
+				replyTo: email
 			});
+
+			console.info(
+				chalk.bgBlueBright('Contact form submitted.  Email sent to info@primestagetechnology.com')
+			);
 
 			return { success: true };
 		} catch (error) {
-			console.error(error);
+			console.error(JSON.stringify(error, null, 2));
 			return { error: 'Failed to send email. Please try again later.' };
 		}
 	}

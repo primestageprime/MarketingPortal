@@ -3,8 +3,8 @@
 	import { enhance } from '$app/forms';
 </script>
 
-<div class="w-100 h-100 d-fr jc-c ai-c">
-	<form method="POST" transition:slide class="contact-form d-fc ph-16 pv-8" use:enhance>
+<div transition:slide class="w-100 h-100 d-fr jc-c ai-c">
+	<form method="POST" class="contact-form d-fc ph-16 pv-8" use:enhance>
 		<label for="name">Name</label>
 		<input required name="name" placeholder="Name" type="text" />
 		<label for="email">Email</label>
