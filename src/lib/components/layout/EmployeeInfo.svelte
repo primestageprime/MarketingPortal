@@ -18,8 +18,8 @@
 	}
 
 	.employee-card img {
-		width: 200px;
-		height: 200px;
+		width: 300px;
+		height: 300px;
 		object-fit: cover;
 		border-radius: 30%;
 	}
