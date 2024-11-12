@@ -25,3 +25,6 @@ package-lock.json
 
 # Build stats
 stats.html
+
+# VS Code Settings
+settings.json
