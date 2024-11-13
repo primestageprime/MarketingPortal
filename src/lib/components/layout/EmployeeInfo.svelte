@@ -8,7 +8,7 @@
 	<img src={imageSrc} alt="Employee avatar" loading="lazy" />
 	<div class="d-fc">
 		<div class="fullName">{fullName}</div>
-		<div class="about-me">{aboutMe}</div>
+		<div class="about-me"><p>{aboutMe}</p></div>
 	</div>
 </div>
 
