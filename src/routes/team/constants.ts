@@ -5,3 +5,7 @@ When I’m not coding, you’ll often find me exploring the Santa Barbara coast.
 export const peterAboutMe = `With a passion for technology that started at age eight, I have a deep background in software development, data analytics, and database management. My early work in Telephony (CallWave) and Cloud Computing (RightScale) challenged me to handle big data at scale, dealing with hundreds of millions of records. I then dedicated nearly a decade to building and managing teams that create  platforms, enabling businesses to gain actionable insights from their data.
     
 Today, I’m focused on creating user-centered, greenfield solutions, bringing together a team I trust to innovate with the end user as the primary focus. Beyond technology, I enjoy reading, playing beach volleyball, experimenting with stir fry recipes, and training my Labrador, Thor, in agility.`;
+
+export const evanAboutMe = `I’m a Central Coast native with a passion for solving problems using the latest technology. I love connecting with customers, understanding their goals, and finding creative ways to help them achieve success. Collaboration and creativity are at the heart of everything I do.
+
+When I’m not working, you can usually find me on the ice playing hockey or mixing up a tiki drink (Mai Tais are my specialty!). I’m a big believer in learning by doing, whether it’s tackling a challenge at work or experimenting with a cocktail recipe.`;
