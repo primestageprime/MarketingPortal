@@ -52,7 +52,6 @@
 
   h1 {
     font-size: 3rem;
-    font-family: "Righteous", sans-serif;
     color: var(--color-text-secondary);
     text-align: center;
   }

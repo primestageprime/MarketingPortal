@@ -25,7 +25,6 @@
   }
   .fullName {
     padding: 8px;
-    font-family: "Righteous", sans-serif;
     font-size: 2rem;
   }
 

@@ -143,7 +143,6 @@
   @import "$scss/variables";
   h2 {
     font-size: 2rem;
-    font-family: "Righteous", sans-serif;
   }
   section.vertical-overflow section {
     display: flex;
