@@ -48,6 +48,7 @@
   }
   main {
     flex: 1;
+    overflow-y: auto;
     min-height: 90vh; // Subtract header height if needed
   }
 
