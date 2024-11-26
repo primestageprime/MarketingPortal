@@ -13,7 +13,8 @@ html {
   height: 100%;
   font-family: "Arial", sans-serif;
   font-size: 16px;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 // Theme Variables
@@ -62,12 +63,12 @@ body {
   display: flex;
   flex-direction: column;
   min-width: 420px;
+  overflow-x: hidden;
   overflow-y: auto;
 }
 
 main {
   flex: 1;
-  overflow-y: auto;
   min-height: calc(100vh - 10vh); // Subtract header height if needed
 }
 
