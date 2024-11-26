@@ -140,6 +140,7 @@
 </section>
 
 <style lang="scss">
+  @import "$scss/variables";
   h2 {
     font-size: 2rem;
     font-family: "Righteous", sans-serif;
@@ -159,10 +160,21 @@
     grid-gap: 1rem;
     justify-content: flex-start;
     flex-direction: column;
-    text-align: justify;
     line-height: 1.5rem;
     font-size: 1.2rem;
     margin-bottom: 24px;
+  }
+
+  @media #{$small-screen} {
+    article {
+      width: 90%;
+    }
+  }
+  // Phone (599px and below)
+  @media #{$phone-portrait} {
+    article {
+      width: 90%;
+    }
   }
   ul {
     padding: 0 1.3rem;

@@ -24,9 +24,9 @@
   .employee-info-section {
     align-items: center;
     justify-content: center;
-    min-height: 60%;
+    min-height: 70vh;
     color: var(--color-text-secondary);
-    padding: 16px;
+    padding: 36px 12px;
   }
   .employee-info-section:nth-child(odd) {
     background-color: var(--color-team-section-background);
