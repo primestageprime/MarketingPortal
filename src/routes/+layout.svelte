@@ -2,8 +2,25 @@
   import DropdownMenu from "$lib/components/DropdownMenu.svelte";
   import NavMenu from "$lib/components/icons/NavMenu.svelte";
   import PsLogo2 from "$lib/components/icons/PsLogo2.svelte";
+  import { onMount } from "svelte";
   import "../app.scss";
   import "../scss/index.scss";
+
+  // Function to dynamically set viewport height
+  function setViewportHeight() {
+    const vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty("--vh", `${vh}px`);
+  }
+
+  // Set up the function on mount and resize
+  onMount(() => {
+    setViewportHeight();
+    window.addEventListener("resize", setViewportHeight);
+
+    return () => {
+      window.removeEventListener("resize", setViewportHeight);
+    };
+  });
 </script>
 
 <header class="header">
@@ -45,11 +62,6 @@
     display: flex;
     justify-content: flex-end;
     gap: 8px;
-  }
-  main {
-    flex: 1;
-    overflow-y: auto;
-    min-height: 90vh; // Subtract header height if needed
   }
 
   a {
