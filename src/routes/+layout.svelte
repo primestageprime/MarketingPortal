@@ -51,6 +51,16 @@
   <slot />
 </main>
 
+<footer>
+  <div class="container">
+    <div class="footer-links">
+      <a href="/terms">Terms & Conditions</a>
+      <a href="/privacy">Privacy Policy</a>
+    </div>
+    <p>© 2025 PrimeStage, Inc. All rights reserved.</p>
+  </div>
+</footer>
+
 <style lang="scss">
   @import "$scss/variables";
 
@@ -131,5 +141,40 @@
     .font-size-3 {
       font-size: 2rem;
     }
+  }
+
+  footer {
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--color-border, #eee);
+  }
+  
+  .container {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .footer-links {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .footer-links a {
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  
+  p {
+    color: var(--color-text-secondary);
+    font-size: 0.9rem;
   }
 </style>
