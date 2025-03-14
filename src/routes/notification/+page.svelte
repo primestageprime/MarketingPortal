@@ -62,6 +62,19 @@
     text-align: left;
   }
   
+  .consent-checkbox-group {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    text-align: left;
+  }
+  
+  .consent-checkbox-label {
+    display: inline;
+    margin-left: 0.5rem;
+    font-weight: normal;
+  }
+  
   .button-secondary-white {
     padding: 0.75rem 1.5rem;
     background-color: var(--color-primary, #0056b3);
