@@ -3,7 +3,7 @@ import type { Actions } from './$types';
 import dotenv from 'dotenv';
 import sgMail from '@sendgrid/mail';
 
-
+// Load environment variables
 dotenv.config();
 
 const sendGridEmail = process.env.EMAIL_USER as string;
@@ -11,7 +11,6 @@ const sendGridApiKey = process.env.SENDGRID_API_KEY as string;
 
 // Configure SendGrid with the API key
 sgMail.setApiKey(sendGridApiKey);
-
 
 export const actions: Actions = {
 	default: async ({ request }) => {
