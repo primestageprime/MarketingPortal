@@ -1,10 +1,17 @@
 import { fail } from '@sveltejs/kit';
 import type { Actions } from './$types';
-import { PRIVATE_SENDGRID_API_KEY } from '$env/static/private';
+import dotenv from 'dotenv';
 import sgMail from '@sendgrid/mail';
 
-// Set SendGrid API key
-sgMail.setApiKey(PRIVATE_SENDGRID_API_KEY);
+
+dotenv.config();
+
+const sendGridEmail = process.env.EMAIL_USER as string;
+const sendGridApiKey = process.env.SENDGRID_API_KEY as string;
+
+// Configure SendGrid with the API key
+sgMail.setApiKey(sendGridApiKey);
+
 
 export const actions: Actions = {
 	default: async ({ request }) => {
@@ -20,7 +27,7 @@ export const actions: Actions = {
 			// Send email notification using SendGrid
 			const msg = {
 				to: 'info@primestagetechnology.com',
-				from: 'noreply@primestagetechnology.com',
+				from: sendGridEmail,
 				subject: 'New SMS Notification Signup',
 				text: `A new user has signed up for SMS notifications.\n\nPhone: ${phone}`,
 				html: `
@@ -33,12 +40,12 @@ export const actions: Actions = {
 			await sgMail.send(msg);
 
 			// Log success
-			console.log('Notification signup email sent:', phone);
+			console.log('consent signup email sent:', phone);
 
 			// Return success
 			return { success: true, phone };
 		} catch (error) {
-			console.error('Failed to send notification email:', error);
+			console.error('Failed to send consent email:', error);
 			return fail(500, { phone, error: true });
 		}
 	}
