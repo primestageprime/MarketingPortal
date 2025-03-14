@@ -35,5 +35,51 @@
   
   h2 {
     margin-bottom: 1rem;
+    color: var(--color-primary, #333);
+    font-weight: 600;
+  }
+  
+  .contact-form {
+    margin-bottom: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  input[type="tel"] {
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    text-align: left;
+  }
+  
+  .button-secondary-white {
+    padding: 0.75rem 1.5rem;
+    background-color: var(--color-primary, #0056b3);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .button-secondary-white:hover {
+    background-color: var(--color-primary-dark, #003d7a);
+  }
+  
+  p {
+    color: var(--color-text-secondary, #666);
+    line-height: 1.5;
   }
 </style>
