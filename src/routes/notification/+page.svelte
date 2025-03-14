@@ -1,4 +1,5 @@
 <script>
+    import { enhance } from '$app/forms';
   // Basic state variables
   let message = "Notification Signup";
 </script>
@@ -6,6 +7,11 @@
 <section class="notification-section">
   <div class="container">
     <h2>{message}</h2>
+    <form method="POST" class="contact-form d-fc ph-16 pv-8" use:enhance>
+		<label for="phone">Phone</label>
+		<input required name="phone" type="tel" placeholder="Phone" />
+		<button class="button-secondary-white" type="submit">Consent</button>
+	</form>
     <p>This page will allow users to sign up for notifications.</p>
   </div>
 </section>
