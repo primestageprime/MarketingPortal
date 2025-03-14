@@ -12,7 +12,7 @@
 		<input required name="phone" type="tel" placeholder="Phone" />
 		<button class="button-secondary-white" type="submit">Consent</button>
 	</form>
-    <p>This page will allow users to sign up for notifications.</p>
+    <p>By submitting this form and signing up for texts, you consent to receive status notifications. Consent is not a condition of purchase. Msg & data rates may apply. Msg frequency varies. Unsubscribe at any time by replying STOP or clicking the unsubscribe link (where available).</p>
   </div>
 </section>
 
