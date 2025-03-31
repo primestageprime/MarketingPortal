@@ -1,38 +1,13 @@
 <script lang="ts">
-  import { onMount } from "svelte";
-  import ArrowScroll from "./ArrowScroll.svelte";
   import PeopleGroup from "./icons/PeopleGroup.svelte";
   import HeartUser from "./icons/HeartUser.svelte";
   import Process from "./icons/Process.svelte";
   import HomePageSection from "./HomePageSection.svelte";
   import CircuitBoard from "./icons/CircuitBoard.svelte";
   import { slide } from "svelte/transition";
-
-  let scrollIndicator: HTMLDivElement;
-  let scrollContainer: HTMLDivElement;
-
-  // Function to check if scrolled to 90% of the container
-  function handleScroll() {
-    const scrollPosition = scrollContainer.scrollTop + scrollContainer.clientHeight;
-    const containerHeight = scrollContainer.scrollHeight;
-
-    if (scrollPosition >= containerHeight * 0.1) {
-      scrollIndicator.style.opacity = "0";
-    }
-  }
-
-  onMount(() => {
-    scrollContainer.addEventListener("scroll", handleScroll);
-    return () => {
-      scrollContainer.removeEventListener("scroll", handleScroll);
-    };
-  });
 </script>
 
-<div transition:slide class="vertical-overflow" bind:this={scrollContainer}>
-  <div bind:this={scrollIndicator} class="scroll-indicator">
-    <ArrowScroll />
-  </div>
+<div transition:slide>
   <div class="home-section top-section" id="portal-start">
     <h2 class="shiny-metallic-text infinite-shine bold font-size-4">Custom web development</h2>
   </div>
@@ -111,7 +86,7 @@
       },
     ]}><HeartUser height="200px" fill="#a6a6a6" slot="icon-content" /></HomePageSection
   >
-  <div class="home-section responsive-flex" id="contact-form">
+  <div class="contact-us-section responsive-flex" id="contact-form">
     <div class="icon-content">
       <a href="contact" class="button-secondary-white">Contact Us</a>
     </div>
@@ -121,28 +96,21 @@
 <style lang="scss">
   @import "../../scss/variables";
 
-  .home-section {
-    justify-content: center;
-    height: 70%;
-    width: 100%;
-  }
-
-  .home-section:nth-child(odd) {
-    background-color: var(--color-info-section-background);
-  }
-
   .home-section.top-section {
     display: flex;
     align-items: center;
     height: 90vh;
     background-color: transparent;
+    justify-content: center;
   }
 
-  .scroll-indicator {
-    position: fixed;
-    top: 90%;
-    left: 50%;
-    transition: all 1s ease;
+  .contact-us-section {
+    display: flex;
+    align-items: center;
+    min-height: 70vh;
+    background-color: transparent;
+    justify-content: center;
+    background-color: var(--color-info-section-background);
   }
 
   .infinite-shine {

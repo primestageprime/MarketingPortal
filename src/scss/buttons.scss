@@ -1,122 +1,114 @@
 .button-primary {
-	background-color: var(--color-button-primary);
-	color: var(--color-button-secondary-white);
-	padding: 0.75rem 1.5rem; // Default padding for desktop
-	font-size: 1rem; // Default font size for desktop
-	border-radius: 4px;
-	border: none;
-	cursor: pointer;
-	transition: all 0.3s;
-	text-decoration: none; /* Remove underline when using for anchor tags */
+  background-color: var(--color-button-primary);
+  color: var(--color-button-secondary-white);
+  padding: 0.75rem 1.5rem; // Default padding for desktop
+  font-size: 1rem; // Default font size for desktop
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-decoration: none; /* Remove underline when using for anchor tags */
 
-	&:hover {
-		background-color: var(--color-button-primary-hover);
-		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-		transform: scale(1.05);
-	}
-	&:focus {
-		background-color: var(--color-button-primary-focus);
-		box-shadow: 0 0 0 3px rgba(77, 140, 255, 0.4); // Add a soft focus ring
-		outline: none; // Remove default outline
-	}
+  &:hover {
+    background-color: var(--color-button-primary-hover);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  &:focus {
+    background-color: var(--color-button-primary-focus);
+    box-shadow: 0 0 0 3px rgba(77, 140, 255, 0.4); // Add a soft focus ring
+    outline: none; // Remove default outline
+  }
 }
 
 .button-accent-gold {
-	background-color: transparent;
-	color: var(--color-button-accent-gold);
-	padding: 0.75rem 1.5rem; // Default padding for desktop
-	font-size: 1rem; // Default font size for desktop
-	border-radius: 4px;
-	border: 2px solid var(--color-button-accent-gold);
-	cursor: pointer;
-	transition: all 0.3s;
-	text-decoration: none; /* Remove underline when using for anchor tags */
+  background-color: transparent;
+  color: var(--color-button-accent-gold);
+  padding: 0.75rem 1.5rem; // Default padding for desktop
+  font-size: 1rem; // Default font size for desktop
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-decoration: none; /* Remove underline when using for anchor tags */
 
-	&:hover {
-		color: var(--color-button-accent-gold-hover);
-		border: 2px solid var(--color-button-accent-gold-hover);
-		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-		transform: scale(1.05);
-	}
-	&:focus {
-		color: var(--color-button-accent-gold-focus);
-		border: 2px solid var(--color-button-accent-gold-focus);
-		box-shadow: 0 0 0 3px rgba(77, 140, 255, 0.4); // Add a soft focus ring
-		outline: none; // Remove default outline
-	}
+  &:hover {
+    color: var(--color-button-accent-gold-hover);
+    border: 2px solid var(--color-button-accent-gold-hover);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  &:focus {
+    color: var(--color-button-accent-gold-focus);
+    border: 2px solid var(--color-button-accent-gold-focus);
+    box-shadow: 0 0 0 3px rgba(77, 140, 255, 0.4); // Add a soft focus ring
+    outline: none; // Remove default outline
+  }
 }
 
 .button-accent-orange {
-	background-color: transparent;
-	color: var(--color-button-accent-orange);
-	padding: 0.75rem 1.5rem; // Default padding for desktop
-	font-size: 1rem; // Default font size for desktop
-	border-radius: 4px;
-	border: 2px solid var(--color-button-accent-orange);
-	cursor: pointer;
-	transition: all 0.3s;
-	text-decoration: none; /* Remove underline when using for anchor tags */
+  background-color: transparent;
+  color: var(--color-button-accent-orange);
+  padding: 0.75rem 1.5rem; // Default padding for desktop
+  font-size: 1rem; // Default font size for desktop
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-decoration: none; /* Remove underline when using for anchor tags */
 
-	&:hover {
-		color: var(--color-button-accent-orange-hover);
-		border: 2px solid var(--color-button-accent-orange-hover);
-		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-		transform: scale(1.05);
-	}
-	&:focus {
-		color: var(--color-button-accent-orange-focus);
-		border: 2px solid var(--color-button-accent-orange-focus);
-		box-shadow: 0 0 0 3px rgba(77, 140, 255, 0.4); // Add a soft focus ring
-		outline: none; // Remove default outline
-	}
+  &:hover {
+    color: var(--color-button-accent-orange-hover);
+    border: 2px solid var(--color-button-accent-orange-hover);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  &:focus {
+    color: var(--color-button-accent-orange-focus);
+    border: 2px solid var(--color-button-accent-orange-focus);
+    box-shadow: 0 0 0 3px rgba(77, 140, 255, 0.4); // Add a soft focus ring
+    outline: none; // Remove default outline
+  }
 }
 
 .button-accent-red {
-	background-color: transparent;
-	color: var(--color-button-accent-red);
-	padding: 0.75rem 1.5rem; // Default padding for desktop
-	font-size: 1rem; // Default font size for desktop
-	border-radius: 4px;
-	border: 2px solid var(--color-button-accent-red);
-	cursor: pointer;
-	transition: all 0.3s;
-	text-decoration: none; /* Remove underline when using for anchor tags */
+  background-color: transparent;
+  color: var(--color-button-accent-red);
+  padding: 0.75rem 1.5rem; // Default padding for desktop
+  font-size: 1rem; // Default font size for desktop
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-decoration: none; /* Remove underline when using for anchor tags */
 
-	&:hover {
-		color: var(--color-button-accent-red-hover);
-		border: 2px solid var(--color-button-accent-red-hover);
-		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-		transform: scale(1.05);
-	}
-	&:focus {
-		color: var(--color-button-accent-red-focus);
-		border: 2px solid var(--color-button-accent-red-focus);
-		box-shadow: 0 0 0 3px rgba(77, 140, 255, 0.4); // Add a soft focus ring
-		outline: none; // Remove default outline
-	}
+  &:hover {
+    color: var(--color-button-accent-red-hover);
+    border: 2px solid var(--color-button-accent-red-hover);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  &:focus {
+    color: var(--color-button-accent-red-focus);
+    border: 2px solid var(--color-button-accent-red-focus);
+    box-shadow: 0 0 0 3px rgba(77, 140, 255, 0.4); // Add a soft focus ring
+    outline: none; // Remove default outline
+  }
 }
 
 .button-secondary-white {
-	background-color: transparent;
-	padding: 0.6rem 1.2rem; // Default padding for desktop
-	font-size: 1rem; // Default font size for desktop
-	border-radius: 4px;
-	color: var(--color-button-secondary-white);
-	border: 2px solid var(--color-button-secondary-white);
-	cursor: pointer;
-	transition: all 0.3s;
-	text-decoration: none; /* Remove underline when using for anchor tags */
+  background-color: transparent;
+  padding: 0.6rem 1.2rem; // Default padding for desktop
+  font-size: 1rem; // Default font size for desktop
+  border-radius: 4px;
+  color: var(--color-button-secondary-white);
+  border: 2px solid var(--color-button-secondary-white);
+  cursor: pointer;
+  transition: all 0.3s;
+  text-decoration: none; /* Remove underline when using for anchor tags */
 
-	&:hover {
-		color: var(--color-button-secondary-white-hover);
-		border: 2px solid var(--color-button-secondary-white-hover);
-		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-		transform: scale(1.05);
-	}
-	&:focus {
-		color: var(--color-button-secondary-white-focus);
-		border: 2px solid var(--color-button-secondary-white-focus);
-		box-shadow: 0 0 0 3px rgba(77, 140, 255, 0.4); // Add a soft focus ring
-		outline: none; // Remove default outline
-	}
+  &:hover {
+    color: var(--color-button-secondary-white-hover);
+    border: 2px solid var(--color-button-secondary-white-hover);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  &:focus {
+    color: var(--color-button-secondary-white-focus);
+    border: 2px solid var(--color-button-secondary-white-focus);
+    box-shadow: 0 0 0 3px rgba(77, 140, 255, 0.4); // Add a soft focus ring
+    outline: none; // Remove default outline
+  }
 }

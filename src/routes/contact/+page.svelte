@@ -1,22 +1,22 @@
 <script lang="ts">
-	import { slide } from 'svelte/transition';
-	import { enhance } from '$app/forms';
+  import { slide } from "svelte/transition";
+  import { enhance } from "$app/forms";
 </script>
 
-<div transition:slide class="w-100 h-100 d-fr jc-c ai-c">
-	<form method="POST" class="contact-form d-fc ph-16 pv-8" use:enhance>
-		<label for="name">Name</label>
-		<input required name="name" placeholder="Name" type="text" />
-		<label for="email">Email</label>
-		<input required name="email" type="email" placeholder="Email" />
-		<label for="message">Message</label>
-		<textarea
-			required
-			name="message"
-			placeholder="Let us know how we can help launch your vision into outer orbit."
-		/>
-		<button class="button-secondary-white" type="submit"> Send Message</button>
-	</form>
+<div transition:slide class="w-100 d-fr jc-c ai-c contact-form-container">
+  <form method="POST" class="contact-form d-fc ph-16 pv-8" use:enhance>
+    <label for="name">Name</label>
+    <input required name="name" placeholder="Name" type="text" />
+    <label for="email">Email</label>
+    <input required name="email" type="email" placeholder="Email" />
+    <label for="message">Message</label>
+    <textarea
+      required
+      name="message"
+      placeholder="Let us know how we can help launch your vision into outer orbit."
+    />
+    <button class="button-secondary-white" type="submit"> Send Message</button>
+  </form>
 </div>
 
 <!-- .error-message {
@@ -26,79 +26,83 @@
 	} -->
 
 <style lang="scss">
-	.contact-form {
-		max-width: 600px;
-		flex: 1;
-	}
+  .contact-form-container {
+    min-height: 100vh;
+  }
 
-	/* Variables for easy theme customization */
-	$primary-color: #4a90e2;
-	$error-color: #d32f2f;
-	$border-color: #cccccc;
-	$background-color: #f9f9f9;
-	$font-color: #333333;
-	$label-color: #868686;
-	$focus-color: $primary-color;
-	$disabled-bg: #e0e0e0;
-	$disabled-color: #757575;
-	$border-radius: 4px;
-	$input-padding: 12px;
+  .contact-form {
+    max-width: 600px;
+    flex: 1;
+  }
 
-	/* Accessible focus styles */
-	@mixin focus-outline {
-		outline: 3px solid $focus-color;
-		outline-offset: 2px;
-	}
+  /* Variables for easy theme customization */
+  $primary-color: #4a90e2;
+  $error-color: #d32f2f;
+  $border-color: #cccccc;
+  $background-color: #f9f9f9;
+  $font-color: #333333;
+  $label-color: #868686;
+  $focus-color: $primary-color;
+  $disabled-bg: #e0e0e0;
+  $disabled-color: #757575;
+  $border-radius: 4px;
+  $input-padding: 12px;
 
-	/* Base input styles */
-	input[type='text'],
-	input[type='email'],
-	textarea {
-		margin-bottom: 24px;
-		width: 100%;
-		padding: $input-padding;
-		border: 1px solid $border-color;
-		border-radius: $border-radius;
-		background-color: $background-color;
-		color: $font-color;
-		font-size: 16px;
-		line-height: 1.5;
-		transition:
-			border-color 0.2s ease-in-out,
-			box-shadow 0.2s ease-in-out;
+  /* Accessible focus styles */
+  @mixin focus-outline {
+    outline: 3px solid $focus-color;
+    outline-offset: 2px;
+  }
 
-		&:focus {
-			@include focus-outline;
-			border-color: $focus-color;
-		}
+  /* Base input styles */
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    margin-bottom: 24px;
+    width: 100%;
+    padding: $input-padding;
+    border: 1px solid $border-color;
+    border-radius: $border-radius;
+    background-color: $background-color;
+    color: $font-color;
+    font-size: 16px;
+    line-height: 1.5;
+    transition:
+      border-color 0.2s ease-in-out,
+      box-shadow 0.2s ease-in-out;
 
-		&:disabled {
-			background-color: $disabled-bg;
-			color: $disabled-color;
-			cursor: not-allowed;
-		}
+    &:focus {
+      @include focus-outline;
+      border-color: $focus-color;
+    }
 
-		/* High contrast for errors */
-		// &.error {
-		// 	border-color: $error-color;
-		// }
+    &:disabled {
+      background-color: $disabled-bg;
+      color: $disabled-color;
+      cursor: not-allowed;
+    }
 
-		&::placeholder {
-			color: #999;
-		}
-	}
+    /* High contrast for errors */
+    // &.error {
+    // 	border-color: $error-color;
+    // }
 
-	/* Specific styles for textarea */
-	textarea {
-		min-height: 150px;
-		resize: vertical;
-	}
+    &::placeholder {
+      color: #999;
+    }
+  }
 
-	/* Labels with proper spacing */
-	label {
-		display: block;
-		margin-bottom: 8px;
-		font-weight: 600;
-		color: $label-color;
-	}
+  /* Specific styles for textarea */
+  textarea {
+    min-height: 150px;
+    resize: vertical;
+  }
+
+  /* Labels with proper spacing */
+  label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: $label-color;
+  }
 </style>

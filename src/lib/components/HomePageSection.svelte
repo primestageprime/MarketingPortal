@@ -41,12 +41,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 70%;
+    min-height: 70vh;
     padding: 24px;
     gap: 3rem;
   }
 
-  .home-section:nth-child(odd) {
+  .home-section:nth-child(even) {
     background-color: var(--color-info-section-background);
   }
 
